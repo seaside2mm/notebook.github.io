@@ -1,0 +1,349 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>数学/泛函分析/內积空间 | Note</title>
+  <meta name="author" content="Zhang Baihui">
+  
+  <meta name="description" content="有缘网线来相会">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="数学/泛函分析/內积空间"/>
+  <meta property="og:site_name" content="Note"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+    <link rel="alternative" href="/notebook.github.io/atom.xml" title="Note" type="application/atom+xml">
+  
+  
+    <link href="/notebook.github.io/favicon.png" rel="icon">
+  
+  
+  <link rel="stylesheet" href="/notebook.github.io/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/notebook.github.io/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/notebook.github.io/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/notebook.github.io/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/notebook.github.io/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/notebook.github.io/css/responsive.css" media="screen" type="text/css">  
+  <link rel="stylesheet" href="/notebook.github.io/css/sidenav.css" media="screen" type="text/css">  
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/notebook.github.io/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+
+</head>
+
+<body id="body" data-spy="scroll" data-target=".toc">
+  <div class="container" id="container">
+	<div class="content">
+	  <div class="page-header">		
+  <h1><a class="brand" href="/notebook.github.io/">Note</a><span class="split"></span><span class="title">数学/泛函分析/內积空间</span><span class="date" id="title-date"><i class="fa fa-clock-o"></i> 2019-05-12</span></h1>
+</div>		
+
+<div class="row page">
+  <!-- cols -->	
+  
+  
+
+  
+	<div class="col-md-12">
+	  
+
+	  <!-- content -->
+	  <h1 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h1><p>![](img/Screen Shot 2020-02-18 at 10.17.18 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-05 at 11.42.02 AM.png)</p>
+<blockquote>
+<p>Hilbert相伴算子定义的算子（自伴算子，酉算子，正规算子）。</p>
+</blockquote>
+<h1 id="1-内积"><a href="#1-内积" class="headerlink" title="1 内积"></a>1 内积</h1><p>![](img/Screen Shot 2020-02-18 at 10.18.31 PM.png)</p>
+<h2 id="1-1-内积诱导的范数和距离"><a href="#1-1-内积诱导的范数和距离" class="headerlink" title="1.1 内积诱导的范数和距离"></a>1.1 内积诱导的范数和距离</h2><p>$$<br>||x||=\sqrt{(x,x)}\<br>d(x,y)=||x-y||=\sqrt{(x-y,x-y)}<br>$$</p>
+<h3 id="Schwarz不等式"><a href="#Schwarz不等式" class="headerlink" title="Schwarz不等式"></a>Schwarz不等式</h3><p>![](img/Screen Shot 2020-02-18 at 10.20.31 PM.png)</p>
+<p>![](img/Screen Shot 2020-02-18 at 10.21.40 PM.png)</p>
+<p>![](img/Screen Shot 2020-02-18 at 10.23.50 PM.png)</p>
+<h2 id="1-2-关系"><a href="#1-2-关系" class="headerlink" title="1.2 关系"></a>1.2 关系</h2><p>![](img/Screen Shot 2020-02-18 at 10.25.20 PM.png)</p>
+<p>![](img/Screen Shot 2020-02-18 at 10.26.00 PM.png)</p>
+<h2 id="1-3-性质"><a href="#1-3-性质" class="headerlink" title="1.3 性质"></a>1.3 性质</h2><h3 id="不等式"><a href="#不等式" class="headerlink" title="不等式"></a>不等式</h3><p>![](img/Screen Shot 2020-03-05 at 12.00.32 PM.png)</p>
+<h3 id="连续性"><a href="#连续性" class="headerlink" title="连续性"></a>连续性</h3><p>内积空间，$x_n\to x,\ y_n\to y\ \Rightarrow (x_n,y_n)\to(x,y)$</p>
+<blockquote>
+<p>利用上面不等式可证$|(x_n,y_n)-(x,y)|\to 0$</p>
+</blockquote>
+<p>![](img/Screen Shot 2020-03-05 at 12.07.16 PM.png)</p>
+<p>等距算子。</p>
+<h3 id="完备性"><a href="#完备性" class="headerlink" title="完备性"></a>完备性</h3><p>完备的内积空间是希尔伯特空间。</p>
+<p>![](img/Screen Shot 2020-03-05 at 12.10.58 PM.png)</p>
+<h3 id="子空间"><a href="#子空间" class="headerlink" title="子空间"></a>子空间</h3><p>![](img/Screen Shot 2020-03-05 at 12.12.15 PM.png)</p>
+<h2 id="1-4-例子"><a href="#1-4-例子" class="headerlink" title="1.4 例子"></a>1.4 例子</h2><ul>
+<li><p>欧几里得空间$\R^n$,  酉空间$\C^n$</p>
+</li>
+<li><p>$L^2(a,b)$</p>
+</li>
+</ul>
+<p>$$<br>(x,y)=\int_a^bx(t)y(t)dt \||x||=(\int_a^bx^2(t)dt)^{1/2} \<br>$$</p>
+<p>![](img/Screen Shot 2020-03-05 at 12.15.15 PM.png)</p>
+<ul>
+<li>希尔伯特序列空间$l^2$</li>
+</ul>
+<p>![](img/Screen Shot 2020-03-05 at 12.13.41 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-05 at 12.16.17 PM.png)</p>
+<h1 id="2-正交与正交补"><a href="#2-正交与正交补" class="headerlink" title="2 正交与正交补"></a>2 正交与正交补</h1><h2 id="2-1-定义"><a href="#2-1-定义" class="headerlink" title="2.1 定义"></a>2.1 定义</h2><p>![](img/Screen Shot 2020-02-28 at 6.30.13 PM.png)</p>
+<p>![](img/Screen Shot 2020-02-28 at 6.30.47 PM.png)</p>
+<h2 id="2-2-最佳逼近"><a href="#2-2-最佳逼近" class="headerlink" title="2.2 最佳逼近"></a>2.2 最佳逼近</h2><h3 id="最佳逼近点"><a href="#最佳逼近点" class="headerlink" title="最佳逼近点"></a>最佳逼近点</h3><p>![](img/Screen Shot 2020-02-28 at 6.33.45 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-05 at 12.21.20 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-05 at 12.22.43 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-05 at 12.24.01 PM.png)</p>
+<p>![](img/Screen Shot 2020-02-28 at 6.34.22 PM.png)</p>
+<h3 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h3><p>![](img/Screen Shot 2020-02-28 at 6.34.57 PM.png)</p>
+<p>![](img/Screen Shot 2020-02-28 at 6.35.34 PM.png)</p>
+<p>![](img/Screen Shot 2020-02-28 at 6.36.04 PM.png)</p>
+<p>![](img/Screen Shot 2020-02-28 at 6.36.35 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-05 at 12.28.30 PM.png)</p>
+<h2 id="2-3-正交补-2"><a href="#2-3-正交补-2" class="headerlink" title="2.3 正交补(2)"></a>2.3 正交补(2)</h2><h3 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h3><p>![](img/Screen Shot 2020-02-28 at 6.31.17 PM.png)</p>
+<p>![](img/Screen Shot 2020-02-28 at 6.32.12 PM.png)</p>
+<p>![](img/Screen Shot 2020-02-28 at 6.32.44 PM.png)</p>
+<p>![](img/Screen Shot 2020-02-28 at 6.33.11 PM.png)</p>
+<h3 id="稠密"><a href="#稠密" class="headerlink" title="稠密"></a>稠密</h3><p>![](img/Screen Shot 2020-03-05 at 12.44.55 PM.png)</p>
+<h3 id="零空间"><a href="#零空间" class="headerlink" title="零空间"></a>零空间</h3><p>![](img/Screen Shot 2020-03-05 at 12.41.27 PM.png)</p>
+<h3 id="正交分解"><a href="#正交分解" class="headerlink" title="正交分解"></a>正交分解</h3><p>![](img/Screen Shot 2020-02-28 at 6.37.04 PM.png)</p>
+<p>![](img/Screen Shot 2020-02-28 at 6.37.59 PM.png)</p>
+<p>![](img/Screen Shot 2020-02-28 at 6.38.24 PM.png)</p>
+<p>![](img/Screen Shot 2020-02-28 at 6.38.54 PM.png)</p>
+<h1 id="3-标准正交基和正交序列"><a href="#3-标准正交基和正交序列" class="headerlink" title="3 标准正交基和正交序列"></a>3 标准正交基和正交序列</h1><h2 id="3-1-正交系"><a href="#3-1-正交系" class="headerlink" title="3.1 正交系"></a>3.1 正交系</h2><p>![](img/Screen Shot 2020-03-05 at 12.48.08 PM.png)</p>
+<p>![](img/Screen Shot 2020-02-28 at 6.20.09 PM.png)</p>
+<blockquote>
+<p>注意概念，只要求两两正交。不要求是完全的</p>
+</blockquote>
+<p>![](img/Screen Shot 2020-02-28 at 6.20.43 PM.png)</p>
+<h3 id="线性无关"><a href="#线性无关" class="headerlink" title="线性无关"></a>线性无关</h3><p>![](img/Screen Shot 2020-02-28 at 6.21.45 PM.png)</p>
+<h2 id="3-2-正交投影"><a href="#3-2-正交投影" class="headerlink" title="3.2 正交投影"></a>3.2 正交投影</h2><p>![](img/Screen Shot 2020-03-05 at 12.36.59 PM.png)</p>
+<p>![](img/Screen Shot 2020-02-28 at 6.22.17 PM.png)</p>
+<p>![](img/Screen Shot 2020-02-28 at 6.23.37 PM.png)</p>
+<h2 id="3-3-正交列"><a href="#3-3-正交列" class="headerlink" title="3.3 正交列"></a>3.3 正交列</h2><p>![](img/Screen Shot 2020-03-05 at 12.56.33 PM.png)</p>
+<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><img src="img/Screen Shot 2020-03-05 at 4.31.00 PM.png" style="zoom:80%;" />
+
+<p>![](img/Screen Shot 2020-03-05 at 4.33.42 PM.png)</p>
+<h1 id="4-完全性（2）"><a href="#4-完全性（2）" class="headerlink" title="4 完全性（2）"></a>4 完全性（2）</h1><h2 id="4-1-正交基"><a href="#4-1-正交基" class="headerlink" title="4.1 正交基"></a>4.1 正交基</h2><blockquote>
+<p>注意区别与正交系，正交列定义的区别。全空间的元素都可以用一组正交基表示出来。</p>
+</blockquote>
+<p>![](img/Screen Shot 2020-02-28 at 6.25.24 PM.png)</p>
+<h3 id="例子-1"><a href="#例子-1" class="headerlink" title="例子"></a>例子</h3><p>![](img/Screen Shot 2020-02-28 at 6.25.55 PM.png)</p>
+<p>![](img/Screen Shot 2020-02-28 at 6.26.49 PM.png)</p>
+<h3 id="Fourier级数"><a href="#Fourier级数" class="headerlink" title="Fourier级数"></a>Fourier级数</h3><p>![](img/Screen Shot 2020-02-28 at 6.27.23 PM.png)</p>
+<p>![](img/Screen Shot 2020-02-28 at 6.27.56 PM.png)</p>
+<h2 id="Bessel不等式"><a href="#Bessel不等式" class="headerlink" title="Bessel不等式"></a>Bessel不等式</h2><p>![](img/Screen Shot 2020-02-28 at 6.39.43 PM.png)</p>
+<p>![](img/Screen Shot 2020-02-28 at 6.40.25 PM.png)</p>
+<h2 id="收敛性"><a href="#收敛性" class="headerlink" title="收敛性"></a>收敛性</h2><p>![](img/Screen Shot 2020-02-28 at 6.40.57 PM.png)</p>
+<p>![](img/Screen Shot 2020-02-28 at 6.41.23 PM.png)</p>
+<p>![](img/Screen Shot 2020-02-28 at 6.41.49 PM.png)</p>
+<p>![](img/Screen Shot 2020-02-28 at 6.42.13 PM.png)</p>
+<h2 id="正交列的完全性"><a href="#正交列的完全性" class="headerlink" title="正交列的完全性"></a>正交列的完全性</h2><h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>3维空间，如果只有2个正交列，不行。</p>
+<p>对于无穷维空间，多少个正交列才够？需要完全个（total）。</p>
+<p>![](img/Screen Shot 2020-02-28 at 6.42.38 PM.png)</p>
+<p>![](img/Screen Shot 2020-02-28 at 6.43.21 PM.png)</p>
+<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>![](img/Screen Shot 2020-03-05 at 1.08.42 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-05 at 1.11.26 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-05 at 1.12.25 PM.png)</p>
+<blockquote>
+<p>完全标准正交列的4种方法。</p>
+<p>证明掌握。</p>
+</blockquote>
+<p>![](img/Screen Shot 2020-02-28 at 6.43.54 PM.png)</p>
+<h3 id="例子-2"><a href="#例子-2" class="headerlink" title="例子"></a>例子</h3><p>什么时候正交列是正交基？</p>
+<p>![](img/Screen Shot 2020-02-28 at 6.44.26 PM.png)</p>
+<p>![](img/Screen Shot 2020-02-28 at 6.44.58 PM.png)</p>
+<p>![](img/Screen Shot 2020-02-28 at 6.45.24 PM.png)</p>
+<h1 id="可分希尔伯特空间"><a href="#可分希尔伯特空间" class="headerlink" title="可分希尔伯特空间"></a>可分希尔伯特空间</h1><p>##正交化算法</p>
+<blockquote>
+<p>与线性代数类似。</p>
+<p>不断做在前一个基上的投影，长成新的子空间。</p>
+</blockquote>
+<p>![](img/Screen Shot 2020-02-28 at 6.10.10 PM.png)</p>
+<p>![](img/Screen Shot 2020-02-28 at 6.10.38 PM.png)</p>
+<h2 id="可分"><a href="#可分" class="headerlink" title="可分"></a>可分</h2><p>![](img/Screen Shot 2020-03-05 at 11.38.58 AM.png)</p>
+<p>![](img/Screen Shot 2020-02-28 at 6.11.52 PM.png)</p>
+<p>![](img/Screen Shot 2020-02-28 at 6.12.21 PM.png)</p>
+<p>![](img/Screen Shot 2020-02-28 at 6.12.48 PM.png)</p>
+<p>![](img/Screen Shot 2020-02-28 at 6.13.09 PM.png)</p>
+<h1 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h1><p>1-内积</p>
+<p>![](img/Screen Shot 2020-03-05 at 7.32.18 PM.png)</p>
+<blockquote>
+<p>只需证明$||x_n-x||\to 0$</p>
+<p>转化内积，然后使用内积定义。</p>
+</blockquote>
+	  
+
+	  <div>
+  		<center>
+		  <div class="pagination">
+<ul class="pagination">
+	
+	
+	
+	
+	
+	
+		
+			
+		
+	
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+			
+		
+	
+		
+			
+			
+			
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+	
+	
+	
+		<li class="prev"><a href="../4%E4%B8%AA%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>prev</a></li>
+	
+	<li><a href="/notebook.github.io/"><i class="fa fa-archive"></i>Home</a></li>
+	
+		<li class="next"><a href="../%E6%9C%89%E7%95%8C%E7%BA%BF%E6%80%A7%E7%AE%97%E5%AD%90/" class="alignright next">next<i class="fa fa-arrow-circle-o-right"></i></a></li>
+	
+</ul>
+</div>
+
+		</center>
+	  </div>
+	  
+	</div> <!-- col-md-9/col-md-12 -->
+	
+  </div><!-- row -->
+
+	</div>
+  </div>
+  <div class="container-narrow">
+	<footer> <p>
+  &copy; 2020 Zhang Baihui
+  
+      with help from <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-wixo/" target="_blank" rel="noopener">Wixo</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/notebook.github.io/js/jquery.imagesloaded.min.js"></script>
+<script src="/notebook.github.io/js/gallery.js"></script>
+<script src="/notebook.github.io/js/bootstrap.min.js"></script>
+<script src="/notebook.github.io/js/jquery.tableofcontents.min.js"></script>
+<script src="/notebook.github.io/js/tocgenerator.min.js"></script>
+<script src="/notebook.github.io/js/main.js"></script>
+<script src="/notebook.github.io/js/search.js"></script> 
+
+
+
+
+<link rel="stylesheet" href="/notebook.github.io/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/notebook.github.io/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/notebook.github.io/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+</body>
+</html>

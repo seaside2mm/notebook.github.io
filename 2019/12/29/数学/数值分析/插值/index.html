@@ -1,0 +1,270 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>数学/数值分析/插值 | Note</title>
+  <meta name="author" content="Zhang Baihui">
+  
+  <meta name="description" content="有缘网线来相会">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="数学/数值分析/插值"/>
+  <meta property="og:site_name" content="Note"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+    <link rel="alternative" href="/notebook.github.io/atom.xml" title="Note" type="application/atom+xml">
+  
+  
+    <link href="/notebook.github.io/favicon.png" rel="icon">
+  
+  
+  <link rel="stylesheet" href="/notebook.github.io/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/notebook.github.io/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/notebook.github.io/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/notebook.github.io/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/notebook.github.io/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/notebook.github.io/css/responsive.css" media="screen" type="text/css">  
+  <link rel="stylesheet" href="/notebook.github.io/css/sidenav.css" media="screen" type="text/css">  
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/notebook.github.io/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+
+</head>
+
+<body id="body" data-spy="scroll" data-target=".toc">
+  <div class="container" id="container">
+	<div class="content">
+	  <div class="page-header">		
+  <h1><a class="brand" href="/notebook.github.io/">Note</a><span class="split"></span><span class="title">数学/数值分析/插值</span><span class="date" id="title-date"><i class="fa fa-clock-o"></i> 2019-12-29</span></h1>
+</div>		
+
+<div class="row page">
+  <!-- cols -->	
+  
+  
+
+  
+	<div class="col-md-12">
+	  
+
+	  <!-- content -->
+	  <h1 id="多项式插值问题"><a href="#多项式插值问题" class="headerlink" title="多项式插值问题"></a>多项式插值问题</h1><p>$$<br>\phi(x)=a_0+a_1x+a_2x^2+…+a_nx^n+…<br>$$</p>
+<p> 次数：n+1个插值节点产生的插值多项式的次数不超过n次；</p>
+<p>直接求解n+1个多项式方程组，计算复杂，难得到解。</p>
+<p> Vandermonde matrix</p>
+<blockquote>
+<p>polynomial coefficient vectors in Matlab always have the highest power first.</p>
+</blockquote>
+<p>![](img/Screen Shot 2020-02-06 at 5.13.20 PM.png)</p>
+<p>插值多项式的唯一性 </p>
+<blockquote>
+<p>线性方程组解唯一，即系数唯一。</p>
+</blockquote>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; x=<span class="number">0</span>:<span class="number">3</span>;</span><br><span class="line">&gt;&gt; y=[<span class="number">-5</span> <span class="number">-6</span> <span class="number">-1</span> <span class="number">16</span>]</span><br><span class="line">&gt;&gt; <span class="built_in">disp</span>([x;y])</span><br><span class="line">     <span class="number">0</span>     <span class="number">1</span>     <span class="number">2</span>     <span class="number">3</span></span><br><span class="line">    <span class="number">-5</span>    <span class="number">-6</span>    <span class="number">-1</span>    <span class="number">16</span></span><br><span class="line">&gt;&gt; V=<span class="built_in">vander</span>(x)</span><br><span class="line">V =</span><br><span class="line">     <span class="number">0</span>     <span class="number">0</span>     <span class="number">0</span>     <span class="number">1</span></span><br><span class="line">     <span class="number">1</span>     <span class="number">1</span>     <span class="number">1</span>     <span class="number">1</span></span><br><span class="line">     <span class="number">8</span>     <span class="number">4</span>     <span class="number">2</span>     <span class="number">1</span></span><br><span class="line">    <span class="number">27</span>     <span class="number">9</span>     <span class="number">3</span>     <span class="number">1</span></span><br><span class="line">&gt;&gt; c=V\y'</span><br><span class="line">c =</span><br><span class="line">    <span class="number">1.0000</span></span><br><span class="line">    <span class="number">0.0000</span></span><br><span class="line">   <span class="number">-2.0000</span></span><br><span class="line">   <span class="number">-5.0000</span></span><br><span class="line"><span class="comment">% y = x^3 - 2x - 5</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Lagrange插值"><a href="#Lagrange插值" class="headerlink" title="Lagrange插值"></a>Lagrange插值</h2><p>![](img/Screen Shot 2020-02-06 at 4.22.01 PM.png)</p>
+<p>![](img/Screen Shot 2020-02-06 at 4.24.08 PM.png)</p>
+<h3 id="n次插值函数"><a href="#n次插值函数" class="headerlink" title="n次插值函数"></a>n次插值函数</h3><p>求通过n +1个节点的n 次插值多项式$L_n(x)=y_0l_0(x)+…+y_nl_n(x)$;</p>
+<p>满足插值条件：$L_n ( x_j ) = y_j ,\ j = 0, 1, ⋯, n$</p>
+<p>![](img/Screen Shot 2020-02-06 at 4.53.04 PM.png)</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">v</span> = <span class="title">polyinterp</span><span class="params">(x,y,u)</span></span></span><br><span class="line"><span class="comment">%POLYINTERP  Polynomial interpolation.</span></span><br><span class="line"><span class="comment">%   v = POLYINTERP(x,y,u) computes v(j) = P(u(j)) where P is the</span></span><br><span class="line"><span class="comment">%   polynomial of degree d = length(x)-1 with P(x(i)) = y(i).</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% Use Lagrangian representation.</span></span><br><span class="line"><span class="comment">% Evaluate at all elements of u simultaneously.</span></span><br><span class="line"></span><br><span class="line">n = <span class="built_in">length</span>(x);</span><br><span class="line">v = <span class="built_in">zeros</span>(<span class="built_in">size</span>(u));</span><br><span class="line"><span class="keyword">for</span> k = <span class="number">1</span>:n</span><br><span class="line">   w = <span class="built_in">ones</span>(<span class="built_in">size</span>(u));</span><br><span class="line">   <span class="keyword">for</span> <span class="built_in">j</span> = [<span class="number">1</span>:k<span class="number">-1</span> k+<span class="number">1</span>:n]</span><br><span class="line">      w = (u-x(<span class="built_in">j</span>))./(x(k)-x(<span class="built_in">j</span>)).*w;</span><br><span class="line">   <span class="keyword">end</span></span><br><span class="line">   v = v + w*y(k);</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; u=<span class="number">-.25</span>:<span class="number">.01</span>:<span class="number">3.25</span>;</span><br><span class="line">&gt;&gt; v=polyinterp(x,y,u);</span><br><span class="line">&gt;&gt; <span class="built_in">plot</span>(x,y,<span class="string">'o'</span>,u,v,<span class="string">'-'</span>);</span><br></pre></td></tr></table></figure>
+
+<p>![](img/Screen Shot 2020-02-06 at 5.31.49 PM.png)</p>
+<h3 id="插值余项"><a href="#插值余项" class="headerlink" title="插值余项"></a>插值余项</h3><p>![](img/Screen Shot 2020-02-06 at 5.53.47 PM.png)</p>
+<p>![](img/Screen Shot 2020-02-06 at 5.56.26 PM.png)</p>
+<blockquote>
+<p>泰勒公式中的拉格朗日余项。</p>
+</blockquote>
+<h2 id="Piecewise插值"><a href="#Piecewise插值" class="headerlink" title="Piecewise插值"></a>Piecewise插值</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; x=<span class="number">1</span>:<span class="number">6</span>;</span><br><span class="line">&gt;&gt; y=[<span class="number">16</span> <span class="number">18</span> <span class="number">21</span> <span class="number">17</span> <span class="number">15</span> <span class="number">12</span>];</span><br><span class="line">&gt;&gt; <span class="built_in">plot</span>(x,y,<span class="string">'o'</span>,x,y,<span class="string">'-'</span>) <span class="comment">%matalb默认实现</span></span><br></pre></td></tr></table></figure>
+
+<p>![](img/Screen Shot 2020-02-07 at 4.13.09 PM.png)</p>
+<p>![](img/Screen Shot 2020-02-07 at 4.16.42 PM.png)</p>
+<blockquote>
+<p>注：上式x等于新插值区间u</p>
+</blockquote>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">v</span> = <span class="title">piecelin</span><span class="params">(x,y,u)</span></span></span><br><span class="line"><span class="comment">%PIECELIN  Piecewise linear interpolation.</span></span><br><span class="line"><span class="comment">%  v = piecelin(x,y,u) finds the piecewise linear L(x)</span></span><br><span class="line"><span class="comment">%  with L(x(j)) = y(j) and returns v(k) = L(u(k)).</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%  First divided difference 一阶差分</span></span><br><span class="line">   delta = diff(y)./diff(x);</span><br><span class="line"><span class="comment">%  Find subinterval indices k so that x(k) &lt;= u &lt; x(k+1)</span></span><br><span class="line">   n = <span class="built_in">length</span>(x);</span><br><span class="line">   k = <span class="built_in">ones</span>(<span class="built_in">size</span>(u));</span><br><span class="line">   <span class="keyword">for</span> <span class="built_in">j</span> = <span class="number">2</span>:n<span class="number">-1</span></span><br><span class="line">      k(x(<span class="built_in">j</span>) &lt;= u) = <span class="built_in">j</span>;  <span class="comment">%x点对于的u区间进行分段</span></span><br><span class="line">   <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%  Evaluate interpolant</span></span><br><span class="line">   s = u - x(k); <span class="comment">%每一条线段的区间[0,1)</span></span><br><span class="line">   v = y(k) + s.*delta(k);</span><br></pre></td></tr></table></figure>
+
+<h2 id="Piecewise-Cubic-Hermite-Interpolation"><a href="#Piecewise-Cubic-Hermite-Interpolation" class="headerlink" title="Piecewise Cubic Hermite Interpolation"></a>Piecewise Cubic Hermite Interpolation</h2>	  
+
+	  <div>
+  		<center>
+		  <div class="pagination">
+<ul class="pagination">
+	
+	
+	
+	
+	
+	
+		
+			
+		
+	
+		
+	
+		
+			
+		
+	
+		
+			
+			
+		
+	
+		
+			
+			
+			
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+	
+	
+	
+		<li class="prev"><a href="../%E5%A4%A7%E7%BA%B2/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>prev</a></li>
+	
+	<li><a href="/notebook.github.io/"><i class="fa fa-archive"></i>Home</a></li>
+	
+		<li class="next"><a href="../%E6%95%B0%E5%80%BC%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" class="alignright next">next<i class="fa fa-arrow-circle-o-right"></i></a></li>
+	
+</ul>
+</div>
+
+		</center>
+	  </div>
+	  
+	</div> <!-- col-md-9/col-md-12 -->
+	
+  </div><!-- row -->
+
+	</div>
+  </div>
+  <div class="container-narrow">
+	<footer> <p>
+  &copy; 2020 Zhang Baihui
+  
+      with help from <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-wixo/" target="_blank" rel="noopener">Wixo</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/notebook.github.io/js/jquery.imagesloaded.min.js"></script>
+<script src="/notebook.github.io/js/gallery.js"></script>
+<script src="/notebook.github.io/js/bootstrap.min.js"></script>
+<script src="/notebook.github.io/js/jquery.tableofcontents.min.js"></script>
+<script src="/notebook.github.io/js/tocgenerator.min.js"></script>
+<script src="/notebook.github.io/js/main.js"></script>
+<script src="/notebook.github.io/js/search.js"></script> 
+
+
+
+
+<link rel="stylesheet" href="/notebook.github.io/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/notebook.github.io/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/notebook.github.io/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+</body>
+</html>

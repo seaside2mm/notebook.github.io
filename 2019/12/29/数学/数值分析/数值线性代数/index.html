@@ -1,0 +1,264 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>数学/数值分析/数值线性代数 | Note</title>
+  <meta name="author" content="Zhang Baihui">
+  
+  <meta name="description" content="有缘网线来相会">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="数学/数值分析/数值线性代数"/>
+  <meta property="og:site_name" content="Note"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+    <link rel="alternative" href="/notebook.github.io/atom.xml" title="Note" type="application/atom+xml">
+  
+  
+    <link href="/notebook.github.io/favicon.png" rel="icon">
+  
+  
+  <link rel="stylesheet" href="/notebook.github.io/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/notebook.github.io/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/notebook.github.io/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/notebook.github.io/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/notebook.github.io/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/notebook.github.io/css/responsive.css" media="screen" type="text/css">  
+  <link rel="stylesheet" href="/notebook.github.io/css/sidenav.css" media="screen" type="text/css">  
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/notebook.github.io/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+
+</head>
+
+<body id="body" data-spy="scroll" data-target=".toc">
+  <div class="container" id="container">
+	<div class="content">
+	  <div class="page-header">		
+  <h1><a class="brand" href="/notebook.github.io/">Note</a><span class="split"></span><span class="title">数学/数值分析/数值线性代数</span><span class="date" id="title-date"><i class="fa fa-clock-o"></i> 2019-12-29</span></h1>
+</div>		
+
+<div class="row page">
+  <!-- cols -->	
+  
+  
+
+  
+	<div class="col-md-12">
+	  
+
+	  <!-- content -->
+	  <h1 id="矩阵的敏感性分析"><a href="#矩阵的敏感性分析" class="headerlink" title="矩阵的敏感性分析"></a>矩阵的敏感性分析</h1><ul>
+<li>error</li>
+</ul>
+<p>$$<br>e=x - x^* = A^{-1}(b - Ax_*)<br>$$</p>
+<p>If A is nonsingular</p>
+<ul>
+<li><p>residual<br>$r = b - Ax^*$</p>
+</li>
+<li><p>条件数condition number</p>
+</li>
+</ul>
+<p>$$<br>M = max \frac{||Ax||} {||x||} \<br>m = min \frac{||Ax||} {||x||}<br>$$</p>
+<p>M=m is called the condition number of A<br>$$<br>\kappa (A) = \frac {M}{m}<br>$$</p>
+<ul>
+<li><p>relative error</p>
+</li>
+<li><p>relative residual</p>
+</li>
+</ul>
+<blockquote>
+<ul>
+<li><code>cond(A) or cond(A,2)</code> computes$ \kappa_2(A)$.. Uses svd(A). Suitable for smaller<br>matrices where the geometric properties of the l2-norm are important.</li>
+</ul>
+<ul>
+<li><p><code>cond(A,1)</code> computes$ \kappa_1(A)$.. Uses inv(A). Less work than cond(A,2)</p>
+</li>
+<li><p><code>cond(A,inf)</code> computes $ \kappa_1(A)$. Uses inv(A). Same as cond(A’,1).</p>
+</li>
+<li><p><code>condest(A)</code> estimates$ \kappa_1(A)$,  Uses lu(A) and a recent algorithm of Higham<br>and Tisseur [9]. Especially suitable for large, sparse matrices.</p>
+</li>
+<li><p><code>rcond(A)</code> estimates $1/ \kappa_1(A)$. Uses lu(A) and an older algorithm developed<br>by the LINPACK and LAPACK projects. Primarily of historical interest</p>
+</li>
+</ul>
+</blockquote>
+	  
+
+	  <div>
+  		<center>
+		  <div class="pagination">
+<ul class="pagination">
+	
+	
+	
+	
+	
+	
+		
+			
+		
+	
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+			
+		
+	
+		
+			
+			
+			
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+	
+	
+	
+		<li class="prev"><a href="../%E6%8F%92%E5%80%BC/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>prev</a></li>
+	
+	<li><a href="/notebook.github.io/"><i class="fa fa-archive"></i>Home</a></li>
+	
+		<li class="next"><a href="../%E6%A6%82%E8%AE%BA/" class="alignright next">next<i class="fa fa-arrow-circle-o-right"></i></a></li>
+	
+</ul>
+</div>
+
+		</center>
+	  </div>
+	  
+	</div> <!-- col-md-9/col-md-12 -->
+	
+  </div><!-- row -->
+
+	</div>
+  </div>
+  <div class="container-narrow">
+	<footer> <p>
+  &copy; 2020 Zhang Baihui
+  
+      with help from <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-wixo/" target="_blank" rel="noopener">Wixo</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/notebook.github.io/js/jquery.imagesloaded.min.js"></script>
+<script src="/notebook.github.io/js/gallery.js"></script>
+<script src="/notebook.github.io/js/bootstrap.min.js"></script>
+<script src="/notebook.github.io/js/jquery.tableofcontents.min.js"></script>
+<script src="/notebook.github.io/js/tocgenerator.min.js"></script>
+<script src="/notebook.github.io/js/main.js"></script>
+<script src="/notebook.github.io/js/search.js"></script> 
+
+
+
+
+<link rel="stylesheet" href="/notebook.github.io/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/notebook.github.io/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/notebook.github.io/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+</body>
+</html>

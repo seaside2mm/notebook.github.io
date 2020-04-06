@@ -1,0 +1,466 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>数学/概率统计/概率论基础 | Note</title>
+  <meta name="author" content="Zhang Baihui">
+  
+  <meta name="description" content="有缘网线来相会">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="数学/概率统计/概率论基础"/>
+  <meta property="og:site_name" content="Note"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+    <link rel="alternative" href="/notebook.github.io/atom.xml" title="Note" type="application/atom+xml">
+  
+  
+    <link href="/notebook.github.io/favicon.png" rel="icon">
+  
+  
+  <link rel="stylesheet" href="/notebook.github.io/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/notebook.github.io/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/notebook.github.io/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/notebook.github.io/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/notebook.github.io/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/notebook.github.io/css/responsive.css" media="screen" type="text/css">  
+  <link rel="stylesheet" href="/notebook.github.io/css/sidenav.css" media="screen" type="text/css">  
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/notebook.github.io/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+
+</head>
+
+<body id="body" data-spy="scroll" data-target=".toc">
+  <div class="container" id="container">
+	<div class="content">
+	  <div class="page-header">		
+  <h1><a class="brand" href="/notebook.github.io/">Note</a><span class="split"></span><span class="title">数学/概率统计/概率论基础</span><span class="date" id="title-date"><i class="fa fa-clock-o"></i> 2019-05-12</span></h1>
+</div>		
+
+<div class="row page">
+  <!-- cols -->	
+  
+  
+
+  
+	<div class="col-md-12">
+	  
+
+	  <!-- content -->
+	  <h1 id="1-概率模型"><a href="#1-概率模型" class="headerlink" title="1 概率模型"></a>1 概率模型</h1><h2 id="1-1-集合"><a href="#1-1-集合" class="headerlink" title="1.1 集合"></a>1.1 集合</h2><p>![](img/Screen Shot 2020-03-17 at 9.32.26 PM.png)</p>
+<h2 id="1-2-样本空间"><a href="#1-2-样本空间" class="headerlink" title="1.2 样本空间"></a>1.2 样本空间</h2><h3 id="选择适当的样本空间"><a href="#选择适当的样本空间" class="headerlink" title="选择适当的样本空间"></a>选择适当的样本空间</h3><p>Mutually exclusive </p>
+<p>Collectively exhaustive</p>
+<p>Right granularity</p>
+<p>![](img/Screen Shot 2020-03-17 at 9.40.39 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-17 at 9.34.36 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-17 at 9.58.22 PM.png)</p>
+<h3 id="概率律"><a href="#概率律" class="headerlink" title="概率律"></a>概率律</h3><p>![](img/Screen Shot 2020-02-27 at 5.02.42 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-17 at 9.45.40 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-17 at 9.50.12 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-17 at 9.56.22 PM.png)</p>
+<h2 id="1-3-条件概率"><a href="#1-3-条件概率" class="headerlink" title="1.3 条件概率"></a>1.3 条件概率</h2><p>![](img/Screen Shot 2020-03-17 at 10.03.58 PM.png)</p>
+<h3 id="TODO：1-3-2利用条件概率定义概率模型"><a href="#TODO：1-3-2利用条件概率定义概率模型" class="headerlink" title="==TODO：1.3.2利用条件概率定义概率模型=="></a>==TODO：1.3.2利用条件概率定义概率模型==</h3><h2 id="1-4-核心法则"><a href="#1-4-核心法则" class="headerlink" title="1.4 核心法则"></a>1.4 核心法则</h2><p>![](img/Screen Shot 2020-03-17 at 10.18.34 PM.png)</p>
+<p>乘法法则</p>
+<p>链式法则</p>
+<p>贝叶斯法则</p>
+<p>![](img/Screen Shot 2020-02-27 at 9.31.08 PM.png)</p>
+<h3 id="全概率定理与贝叶斯定理"><a href="#全概率定理与贝叶斯定理" class="headerlink" title="全概率定理与贝叶斯定理"></a>全概率定理与贝叶斯定理</h3><p>![](img/Screen Shot 2020-02-27 at 9.21.44 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-17 at 10.21.00 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-17 at 10.26.42 PM.png)</p>
+<p>两种不同思想</p>
+<p>$A_i\to B$: </p>
+<blockquote>
+<p>不同scenario得到结果B的概率$P(B|A_i)$;</p>
+</blockquote>
+<p>$A_i\leftarrow B$</p>
+<blockquote>
+<p>已知结果，inference是scenario $A_i$的概率$P(A_i|B)$;</p>
+<p>如何从部分观测到的经验中或者实验数据中学习</p>
+</blockquote>
+<h2 id="1-5-独立概率"><a href="#1-5-独立概率" class="headerlink" title="1.5 独立概率"></a>1.5 独立概率</h2><p>![](img/Screen Shot 2020-03-17 at 10.38.03 PM.png)</p>
+<h2 id="1-6-总结"><a href="#1-6-总结" class="headerlink" title="1.6 总结"></a>1.6 总结</h2><p>![](img/Screen Shot 2020-03-17 at 10.41.51 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-17 at 10.43.22 PM.png)</p>
+<h1 id="2-离散变量"><a href="#2-离散变量" class="headerlink" title="2 离散变量"></a>2 离散变量</h1><h2 id="2-1-基本概念"><a href="#2-1-基本概念" class="headerlink" title="2.1 基本概念"></a>2.1 基本概念</h2><p>![](img/Screen Shot 2020-03-12 at 8.36.26 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-12 at 8.37.22 PM.png)</p>
+<h2 id="2-2-Probability-Mass-Function"><a href="#2-2-Probability-Mass-Function" class="headerlink" title="2.2 Probability Mass Function"></a>2.2 Probability Mass Function</h2><p>![](img/Screen Shot 2020-03-17 at 10.48.22 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-12 at 8.39.00 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-17 at 10.55.26 PM.png)</p>
+<h2 id="2-3-期望与方差"><a href="#2-3-期望与方差" class="headerlink" title="2.3 期望与方差"></a>2.3 期望与方差</h2><p>$$<br>E(X)=\sum_x x p_X(x)\<br>E(Y)=\sum_x g(x) p_X(x)=\sum_y y p_Y(x) \quad (Y=g(X))<br>$$</p>
+<p>![](img/Screen Shot 2020-03-12 at 8.55.16 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-12 at 8.56.49 PM.png)</p>
+<h2 id="2-4-多个随机变量的联合分布列"><a href="#2-4-多个随机变量的联合分布列" class="headerlink" title="2.4 多个随机变量的联合分布列"></a>2.4 多个随机变量的联合分布列</h2><p>多个随机变量是指在同一个试验结果之下产生的多个随机变量，它们所设计的样本空间和概率律是相同的。</p>
+<p>![](img/Screen Shot 2020-03-17 at 11.21.04 PM.png)</p>
+<h3 id="多个随机变量的函数"><a href="#多个随机变量的函数" class="headerlink" title="多个随机变量的函数"></a>多个随机变量的函数</h3><p>![](img/Screen Shot 2020-03-19 at 10.58.44 AM.png)</p>
+<p>![](img/Screen Shot 2020-03-12 at 8.34.06 PM.png)</p>
+<h2 id="2-5-Conditional-PMF"><a href="#2-5-Conditional-PMF" class="headerlink" title="2.5 Conditional PMF"></a>2.5 Conditional PMF</h2><h3 id="2-5-1-某个事件发生的条件下的随机变量"><a href="#2-5-1-某个事件发生的条件下的随机变量" class="headerlink" title="2.5.1 某个事件发生的条件下的随机变量"></a>2.5.1 某个事件发生的条件下的随机变量</h3><p>![](img/Screen Shot 2020-03-19 at 11.09.04 AM.png)</p>
+<h4 id="图示理解"><a href="#图示理解" class="headerlink" title="图示理解"></a>图示理解</h4><p>2-13</p>
+<p>![](img/Screen Shot 2020-03-19 at 11.14.24 AM.png)</p>
+<p>![](img/Screen Shot 2020-03-19 at 11.17.12 AM.png)</p>
+<h3 id="2-5-2-给定另一个随机变量的值的条件下的随机变量"><a href="#2-5-2-给定另一个随机变量的值的条件下的随机变量" class="headerlink" title="2.5.2 给定另一个随机变量的值的条件下的随机变量"></a>2.5.2 给定另一个随机变量的值的条件下的随机变量</h3><p>![](img/Screen Shot 2020-03-19 at 11.21.59 AM.png)</p>
+<p>![](img/Screen Shot 2020-03-19 at 11.23.27 AM.png)</p>
+<img src="img/Screen Shot 2020-03-12 at 8.31.00 PM.png" style="zoom:150%;" />
+
+<h3 id="2-5-3-条件期望"><a href="#2-5-3-条件期望" class="headerlink" title="2.5.3 条件期望"></a>2.5.3 条件期望</h3><p>![](img/Screen Shot 2020-03-19 at 11.29.55 AM.png)</p>
+<img src="img/Screen Shot 2020-03-12 at 8.32.37 PM.png" style="zoom:150%;" />
+
+<h2 id="2-6-独立"><a href="#2-6-独立" class="headerlink" title="2.6 独立"></a>2.6 独立</h2><h3 id="随机变量与事件的独立性"><a href="#随机变量与事件的独立性" class="headerlink" title="随机变量与事件的独立性"></a>随机变量与事件的独立性</h3><p>![](img/Screen Shot 2020-03-19 at 11.33.08 AM.png)</p>
+<h3 id="随机变量之间的独立性"><a href="#随机变量之间的独立性" class="headerlink" title="随机变量之间的独立性"></a>随机变量之间的独立性</h3><p>![](img/Screen Shot 2020-03-19 at 11.36.43 AM.png)</p>
+<p>![](img/Screen Shot 2020-03-12 at 8.29.33 PM.png)</p>
+<h2 id="2-7-常见PMF"><a href="#2-7-常见PMF" class="headerlink" title="2.7 常见PMF"></a>2.7 常见PMF</h2><p>![](img/Screen Shot 2020-03-12 at 8.27.37 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-12 at 8.28.10 PM.png)</p>
+<h4 id="二项分布"><a href="#二项分布" class="headerlink" title="二项分布"></a>二项分布</h4><p>![](img/Screen Shot 2020-03-12 at 8.40.58 PM.png)</p>
+<h4 id="几何分布"><a href="#几何分布" class="headerlink" title="几何分布"></a>几何分布</h4><p>![](img/Screen Shot 2020-03-12 at 8.42.19 PM.png)</p>
+<h4 id="泊松分布"><a href="#泊松分布" class="headerlink" title="泊松分布"></a>泊松分布</h4><p>![](img/Screen Shot 2020-03-12 at 8.42.57 PM.png)</p>
+<h1 id="3-连续变量"><a href="#3-连续变量" class="headerlink" title="3 连续变量"></a>3 连续变量</h1><h2 id="3-1-Probability-Density-Function"><a href="#3-1-Probability-Density-Function" class="headerlink" title="3.1 Probability Density Function"></a>3.1 Probability Density Function</h2><p>![](img/Screen Shot 2020-03-12 at 2.14.21 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-12 at 2.11.50 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-12 at 2.10.35 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-12 at 2.21.01 PM.png)</p>
+<h3 id="期望"><a href="#期望" class="headerlink" title="期望"></a>期望</h3><p>![](img/Screen Shot 2020-03-12 at 2.23.24 PM.png)</p>
+<h2 id="3-2-Cumulative-Distribution-Function"><a href="#3-2-Cumulative-Distribution-Function" class="headerlink" title="3.2 Cumulative Distribution Function"></a>3.2 Cumulative Distribution Function</h2><p>![](img/Screen Shot 2020-03-12 at 3.54.50 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-19 at 11.48.58 AM.png)</p>
+<h3 id="离散"><a href="#离散" class="headerlink" title="离散"></a>离散</h3><p>![](img/Screen Shot 2020-03-12 at 3.55.39 PM.png)</p>
+<h3 id="连续"><a href="#连续" class="headerlink" title="连续"></a>连续</h3><p>![](img/Screen Shot 2020-03-12 at 3.56.43 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-12 at 3.58.06 PM.png)</p>
+<h3 id="2-3-Joint-PDF"><a href="#2-3-Joint-PDF" class="headerlink" title="2.3 Joint PDF"></a>2.3 Joint PDF</h3><p>![](img/Screen Shot 2020-03-12 at 4.37.49 PM.png)</p>
+<h3 id="2-4-Conditioning"><a href="#2-4-Conditioning" class="headerlink" title="==2.4 Conditioning=="></a>==2.4 Conditioning==</h3><p>![](img/Screen Shot 2020-03-12 at 4.40.49 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-12 at 4.41.36 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-12 at 4.42.28 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-12 at 4.42.51 PM.png)</p>
+<h3 id="条件期望和方差"><a href="#条件期望和方差" class="headerlink" title="条件期望和方差"></a>条件期望和方差</h3><p>![](img/Screen Shot 2020-03-12 at 8.14.38 PM.png)</p>
+<p>重期望</p>
+<p>![](img/Screen Shot 2020-03-12 at 8.06.51 PM.png)</p>
+<p>全方差</p>
+<p>![](img/Screen Shot 2020-03-12 at 8.16.19 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-12 at 8.16.57 PM.png)</p>
+<p>随机数个数相互独立的随机变量之和</p>
+<blockquote>
+<p>利用重期望和全方差法则</p>
+</blockquote>
+<p>![](img/Screen Shot 2020-03-12 at 8.18.45 PM.png)</p>
+<h3 id="2-5-协方差和相关"><a href="#2-5-协方差和相关" class="headerlink" title="2.5 协方差和相关"></a>2.5 协方差和相关</h3><p>![](img/Screen Shot 2020-03-12 at 8.24.20 PM.png)</p>
+<h3 id="2-5-Bayes’-Rule"><a href="#2-5-Bayes’-Rule" class="headerlink" title="2.5 Bayes’ Rule"></a>2.5 Bayes’ Rule</h3><p>![](img/Screen Shot 2020-03-12 at 4.44.07 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-12 at 4.44.33 PM.png)</p>
+<p>![Screen Shot 2020-03-05 at 8.12.57 PM](img/Screen Shot 2020-03-05 at 8.12.57 PM.png)</p>
+<h2 id="常见分布"><a href="#常见分布" class="headerlink" title="常见分布"></a>常见分布</h2><h3 id="均匀"><a href="#均匀" class="headerlink" title="均匀"></a>均匀</h3><p>(1)</p>
+<p>![](img/Screen Shot 2020-03-12 at 4.45.35 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-12 at 2.18.00 PM.png)</p>
+<p>(2)</p>
+<p>![](img/Screen Shot 2020-03-12 at 2.19.32 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-12 at 2.20.19 PM.png)</p>
+<h3 id="指数"><a href="#指数" class="headerlink" title="指数"></a>指数</h3><p>![](img/Screen Shot 2020-03-12 at 2.26.25 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-12 at 4.46.04 PM.png)</p>
+<ul>
+<li>讨论几何随机变量和指数随机变量的关系。</li>
+</ul>
+<blockquote>
+<p>也是离散和连续随机变量的关系</p>
+</blockquote>
+<p>![](img/Screen Shot 2020-03-12 at 4.08.15 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-12 at 4.03.43 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-12 at 4.12.48 PM.png)</p>
+<h3 id="正态"><a href="#正态" class="headerlink" title="正态"></a>正态</h3><p>![](img/Screen Shot 2020-03-12 at 4.26.39 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-12 at 4.27.16 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-12 at 4.28.10 PM.png)</p>
+<ul>
+<li>标准化</li>
+</ul>
+<p>![](img/Screen Shot 2020-03-12 at 4.30.21 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-12 at 4.31.43 PM.png)</p>
+<p>![](img/Screen Shot 2020-02-27 at 5.05.06 PM.png)</p>
+<p>![](img/Screen Shot 2020-02-27 at 5.05.35 PM.png)</p>
+<p>![](img/Screen Shot 2020-02-27 at 5.06.21 PM.png)</p>
+<p>![](img/Screen Shot 2020-02-27 at 5.07.00 PM.png)</p>
+<h2 id="随机向量-矩阵"><a href="#随机向量-矩阵" class="headerlink" title="随机向量/矩阵"></a>随机向量/矩阵</h2><p>![](img/Screen Shot 2020-02-27 at 5.10.07 PM.png)</p>
+<p>![](img/Screen Shot 2020-02-27 at 5.12.20 PM.png)</p>
+<ul>
+<li>性质</li>
+</ul>
+<p>![](img/Screen Shot 2020-03-09 at 11.08.36 AM.png)</p>
+<p>![](img/Screen Shot 2020-03-09 at 11.13.17 AM.png)</p>
+<p>![](img/Screen Shot 2020-03-09 at 11.14.50 AM.png)</p>
+<ul>
+<li>Correlation matrix</li>
+</ul>
+<p>![](img/Screen Shot 2020-03-09 at 11.11.05 AM.png)</p>
+<h2 id="2-3-深入内容"><a href="#2-3-深入内容" class="headerlink" title="2.3 深入内容"></a>2.3 深入内容</h2><h2 id="随机变量函数的PDF"><a href="#随机变量函数的PDF" class="headerlink" title="随机变量函数的PDF"></a>随机变量函数的PDF</h2><p>![](img/Screen Shot 2020-03-12 at 12.59.23 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-12 at 6.45.36 PM.png)</p>
+<blockquote>
+<p>指数随机变量/正态随机变量都满足线性</p>
+</blockquote>
+<ul>
+<li>单调函数</li>
+</ul>
+<p>![](img/Screen Shot 2020-03-12 at 6.51.57 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-12 at 6.52.25 PM.png)</p>
+<blockquote>
+<p>证明1</p>
+</blockquote>
+<p>![](img/Screen Shot 2020-03-12 at 6.59.03 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-12 at 6.57.51 PM.png)</p>
+<blockquote>
+<p>证明2</p>
+</blockquote>
+<p>![](img/Screen Shot 2020-03-12 at 7.01.09 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-12 at 7.03.20 PM.png)</p>
+<h2 id="独立随机变量的和-卷积"><a href="#独立随机变量的和-卷积" class="headerlink" title="独立随机变量的和-卷积"></a>独立随机变量的和-卷积</h2><h1 id="3-随机过程"><a href="#3-随机过程" class="headerlink" title="3 随机过程"></a>3 随机过程</h1><blockquote>
+<p>包含时间以及数据序列的概率模型</p>
+</blockquote>
+<p>![](img/Screen Shot 2020-03-12 at 12.15.13 AM.png)</p>
+<p>未来数据与过去无关，只与当前有关。</p>
+<h2 id="3-1-伯努利过程"><a href="#3-1-伯努利过程" class="headerlink" title="3.1 伯努利过程"></a>3.1 伯努利过程</h2><ul>
+<li>例子</li>
+</ul>
+<p>Sequence of lottery wins/losses </p>
+<p>Sequence of ups and downs of the Dow </p>
+<p> Arrivals (each second) to a bank</p>
+<p> Arrivals (at each time slot) to server</p>
+<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>![](img/Screen Shot 2020-03-19 at 9.00.31 PM.png)</p>
+<blockquote>
+<p>单位时间到达次数：Binomial</p>
+<p>首次到达时间: Geometric</p>
+</blockquote>
+<p>![](img/Screen Shot 2020-03-19 at 9.01.24 PM.png)</p>
+<h3 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h3><p>![](img/Screen Shot 2020-03-20 at 2.39.55 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-20 at 2.41.53 PM.png)</p>
+<h3 id="相邻到达间隔时间"><a href="#相邻到达间隔时间" class="headerlink" title="相邻到达间隔时间"></a>相邻到达间隔时间</h3><blockquote>
+<p>Distribution of interarrival times </p>
+</blockquote>
+<p>![](img/Screen Shot 2020-03-20 at 3.24.55 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-20 at 3.23.57 PM.png)</p>
+<p>###第k次到达时间 </p>
+<blockquote>
+<p>The time of the kth success</p>
+</blockquote>
+<p>![](img/Screen Shot 2020-03-20 at 3.26.46 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-19 at 9.07.37 PM.png)</p>
+<h3 id="二项分布的伯努利近似"><a href="#二项分布的伯努利近似" class="headerlink" title="二项分布的伯努利近似"></a>二项分布的伯努利近似</h3><p>![](img/Screen Shot 2020-03-19 at 9.06.34 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-19 at 9.06.59 PM.png)</p>
+<h2 id="3-2-泊松过程"><a href="#3-2-泊松过程" class="headerlink" title="3.2 泊松过程"></a>3.2 泊松过程</h2><h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><p>![](img/Screen Shot 2020-03-20 at 3.35.55 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-20 at 3.33.01 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-20 at 3.36.45 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-20 at 3.41.13 PM.png)</p>
+<h3 id="区间内到达次数"><a href="#区间内到达次数" class="headerlink" title="区间内到达次数"></a>区间内到达次数</h3><p>![](img/Screen Shot 2020-03-20 at 3.49.06 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-12 at 9.12.05 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-12 at 9.12.39 PM.png)</p>
+<h3 id="相邻到达时间"><a href="#相邻到达时间" class="headerlink" title="相邻到达时间"></a>相邻到达时间</h3><p>![](img/Screen Shot 2020-03-20 at 3.30.57 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-20 at 3.31.42 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-12 at 9.13.04 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-12 at 9.13.32 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-12 at 9.13.53 PM.png)</p>
+<h2 id="3-3-马尔可夫过程"><a href="#3-3-马尔可夫过程" class="headerlink" title="3.3 马尔可夫过程"></a>3.3 马尔可夫过程</h2><p>![](img/Screen Shot 2020-03-12 at 9.14.34 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-12 at 9.15.07 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-12 at 9.15.41 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-12 at 9.16.26 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-12 at 9.16.57 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-12 at 9.17.28 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-12 at 9.17.48 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-12 at 9.18.20 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-12 at 9.18.47 PM.png)</p>
+<h1 id="4-极限理论"><a href="#4-极限理论" class="headerlink" title="4 极限理论"></a>4 极限理论</h1><p>![](img/Screen Shot 2020-03-13 at 9.58.26 PM.png)</p>
+<h2 id="不等式"><a href="#不等式" class="headerlink" title="不等式"></a>不等式</h2><p>![](img/Screen Shot 2020-03-13 at 7.57.19 PM.png)</p>
+<blockquote>
+<p>从均值考虑，如果均值小，随机变量取大值的概率也小。</p>
+</blockquote>
+<p>![](img/Screen Shot 2020-03-13 at 8.08.17 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-13 at 8.03.03 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-13 at 8.11.53 PM.png)</p>
+<p>证明：</p>
+<p>![](img/Screen Shot 2020-03-13 at 8.15.38 PM.png)</p>
+<h2 id="弱大数定理"><a href="#弱大数定理" class="headerlink" title="弱大数定理"></a>弱大数定理</h2><p>![](img/Screen Shot 2020-03-13 at 8.36.35 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-13 at 8.41.35 PM.png)</p>
+<h2 id="中心极限"><a href="#中心极限" class="headerlink" title="中心极限"></a>中心极限</h2><p>![](img/Screen Shot 2020-03-13 at 8.35.12 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-13 at 9.04.31 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-13 at 8.35.49 PM.png)</p>
+<h1 id="5-统计推断"><a href="#5-统计推断" class="headerlink" title="5 统计推断"></a>5 统计推断</h1><h2 id="贝叶斯"><a href="#贝叶斯" class="headerlink" title="贝叶斯"></a>贝叶斯</h2><p>![](img/Screen Shot 2020-03-13 at 7.39.32 PM.png)</p>
+<h2 id="经典"><a href="#经典" class="headerlink" title="经典"></a>经典</h2><p>![](img/Screen Shot 2020-03-13 at 7.40.36 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-13 at 7.21.20 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-13 at 7.21.56 PM.png)</p>
+<p>估计量</p>
+<p>![](img/Screen Shot 2020-03-13 at 7.22.52 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-13 at 7.23.16 PM.png)</p>
+<p>最大似然估计</p>
+<p>![](img/Screen Shot 2020-03-13 at 7.28.30 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-13 at 7.29.48 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-13 at 7.30.18 PM.png)</p>
+<p>![](img/Screen Shot 2020-03-13 at 7.30.49 PM.png)</p>
+	  
+
+	  <div>
+  		<center>
+		  <div class="pagination">
+<ul class="pagination">
+	
+	
+	
+	
+	
+	
+		
+			
+		
+	
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+			
+		
+	
+		
+			
+			
+			
+		
+			
+		
+	
+		
+			
+		
+	
+		
+	
+	
+	
+		<li class="prev"><a href="../%E5%A4%A7%E7%BA%B2/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>prev</a></li>
+	
+	<li><a href="/notebook.github.io/"><i class="fa fa-archive"></i>Home</a></li>
+	
+		<li class="next"><a href="../../%E6%B5%8B%E5%BA%A6/%E5%A4%A7%E7%BA%B2%20copy/" class="alignright next">next<i class="fa fa-arrow-circle-o-right"></i></a></li>
+	
+</ul>
+</div>
+
+		</center>
+	  </div>
+	  
+	</div> <!-- col-md-9/col-md-12 -->
+	
+  </div><!-- row -->
+
+	</div>
+  </div>
+  <div class="container-narrow">
+	<footer> <p>
+  &copy; 2020 Zhang Baihui
+  
+      with help from <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-wixo/" target="_blank" rel="noopener">Wixo</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/notebook.github.io/js/jquery.imagesloaded.min.js"></script>
+<script src="/notebook.github.io/js/gallery.js"></script>
+<script src="/notebook.github.io/js/bootstrap.min.js"></script>
+<script src="/notebook.github.io/js/jquery.tableofcontents.min.js"></script>
+<script src="/notebook.github.io/js/tocgenerator.min.js"></script>
+<script src="/notebook.github.io/js/main.js"></script>
+<script src="/notebook.github.io/js/search.js"></script> 
+
+
+
+
+<link rel="stylesheet" href="/notebook.github.io/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/notebook.github.io/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/notebook.github.io/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+</body>
+</html>
