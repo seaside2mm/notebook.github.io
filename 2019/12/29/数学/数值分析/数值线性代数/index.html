@@ -120,6 +120,10 @@
 	
 		
 			
+		
+	
+		
+			
 			
 		
 	
@@ -199,17 +203,13 @@
 			
 		
 	
-		
-			
-		
 	
 	
-	
-		<li class="prev"><a href="../%E5%A4%A7%E7%BA%B2/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>prev</a></li>
+		<li class="prev"><a href="../%E6%8F%92%E5%80%BC/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>prev</a></li>
 	
 	<li><a href="/notebook.github.io/"><i class="fa fa-archive"></i>Home</a></li>
 	
-		<li class="next"><a href="../%E6%8F%92%E5%80%BC/" class="alignright next">next<i class="fa fa-arrow-circle-o-right"></i></a></li>
+		<li class="next"><a href="../%E6%A6%82%E8%AE%BA/" class="alignright next">next<i class="fa fa-arrow-circle-o-right"></i></a></li>
 	
 </ul>
 </div>
@@ -263,7 +263,24 @@
 	 }
 	 var path = "/notebook.github.io/" + search_path;
      searchFunc(path, 'local-search-input', 'local-search-result');
-   </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+   </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="custom_mathjax_source">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
 
 
 </body>
