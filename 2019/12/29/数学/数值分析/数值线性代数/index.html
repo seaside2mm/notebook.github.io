@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  <meta charset="utf-8">
   
   <title>数学/数值分析/数值线性代数 | Note</title>
   <meta name="author" content="Zhang Baihui">
@@ -36,13 +36,13 @@
 
   <script src="/notebook.github.io/js/jquery-2.0.3.min.js"></script>
 
-  <!-- analytics --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <!-- analytics -->
   
 
 </head>
 
 <body id="body" data-spy="scroll" data-target=".toc">
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container" id="container">
+  <div class="container" id="container">
 	<div class="content">
 	  <div class="page-header">		
   <h1><a class="brand" href="/notebook.github.io/">Note</a><span class="split"></span><span class="title">数学/数值分析/数值线性代数</span><span class="date" id="title-date"><i class="fa fa-clock-o"></i> 2019-12-29</span></h1>
@@ -58,38 +58,36 @@
 	  
 
 	  <!-- content -->
-	  <h1 id="矩阵的敏感性分析"><a href="#矩阵的敏感性分析" class="headerlink" title="矩阵的敏感性分析"></a>矩阵的敏感性分析</h1><ul>
+	  <h1 id="矩阵的敏感性分析">矩阵的敏感性分析</h1>
+<ul>
 <li>error</li>
 </ul>
-<p>$$<br>e=x - x^* = A^{-1}(b - Ax_*)<br>$$</p>
+<p><span class="math display">\[
+e=x - x^* = A^{-1}(b - Ax_*)
+\]</span></p>
 <p>If A is nonsingular</p>
 <ul>
-<li><p>residual<br>$r = b - Ax^*$</p>
-</li>
-<li><p>条件数condition number</p>
-</li>
+<li><p>residual <span class="math inline">\(r = b - Ax^*\)</span></p></li>
+<li><p>条件数condition number</p></li>
 </ul>
-<p>$$<br>M = max \frac{||Ax||} {||x||} \<br>m = min \frac{||Ax||} {||x||}<br>$$</p>
-<p>M=m is called the condition number of A<br>$$<br>\kappa (A) = \frac {M}{m}<br>$$</p>
+<p><span class="math display">\[
+M = max \frac{||Ax||} {||x||} \\
+m = min \frac{||Ax||} {||x||}
+\]</span></p>
+<p>M=m is called the condition number of A <span class="math display">\[
+\kappa (A) = \frac {M}{m}
+\]</span></p>
 <ul>
-<li><p>relative error</p>
-</li>
-<li><p>relative residual</p>
-</li>
+<li><p>relative error</p></li>
+<li><p>relative residual</p></li>
 </ul>
 <blockquote>
 <ul>
-<li><code>cond(A) or cond(A,2)</code> computes$ \kappa_2(A)$.. Uses svd(A). Suitable for smaller<br>matrices where the geometric properties of the l2-norm are important.</li>
-</ul>
-<ul>
-<li><p><code>cond(A,1)</code> computes$ \kappa_1(A)$.. Uses inv(A). Less work than cond(A,2)</p>
-</li>
-<li><p><code>cond(A,inf)</code> computes $ \kappa_1(A)$. Uses inv(A). Same as cond(A’,1).</p>
-</li>
-<li><p><code>condest(A)</code> estimates$ \kappa_1(A)$,  Uses lu(A) and a recent algorithm of Higham<br>and Tisseur [9]. Especially suitable for large, sparse matrices.</p>
-</li>
-<li><p><code>rcond(A)</code> estimates $1/ \kappa_1(A)$. Uses lu(A) and an older algorithm developed<br>by the LINPACK and LAPACK projects. Primarily of historical interest</p>
-</li>
+<li><p><code>cond(A) or cond(A,2)</code> computes$ _2(A)$.. Uses svd(A). Suitable for smaller matrices where the geometric properties of the l2-norm are important.</p></li>
+<li><p><code>cond(A,1)</code> computes$ _1(A)$.. Uses inv(A). Less work than cond(A,2)</p></li>
+<li><p><code>cond(A,inf)</code> computes $ _1(A)$. Uses inv(A). Same as cond(A’,1).</p></li>
+<li><p><code>condest(A)</code> estimates$ _1(A)$, Uses lu(A) and a recent algorithm of Higham and Tisseur [9]. Especially suitable for large, sparse matrices.</p></li>
+<li><p><code>rcond(A)</code> estimates <span class="math inline">\(1/ \kappa_1(A)\)</span>. Uses lu(A) and an older algorithm developed by the LINPACK and LAPACK projects. Primarily of historical interest</p></li>
 </ul>
 </blockquote>
 	  
@@ -263,24 +261,7 @@
 	 }
 	 var path = "/notebook.github.io/" + search_path;
      searchFunc(path, 'local-search-input', 'local-search-result');
-   </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config("");
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-
-<script type="text/javascript" src="custom_mathjax_source">
-</script>
-<!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
+   </script>
 
 
 </body>

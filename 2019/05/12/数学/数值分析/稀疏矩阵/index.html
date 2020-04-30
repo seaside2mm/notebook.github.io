@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  <meta charset="utf-8">
   
   <title>我是标题 | Note</title>
   <meta name="author" content="Zhang Baihui">
@@ -36,13 +36,13 @@
 
   <script src="/notebook.github.io/js/jquery-2.0.3.min.js"></script>
 
-  <!-- analytics --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <!-- analytics -->
   
 
 </head>
 
 <body id="body" data-spy="scroll" data-target=".toc">
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container" id="container">
+  <div class="container" id="container">
 	<div class="content">
 	  <div class="page-header">		
   <h1><a class="brand" href="/notebook.github.io/">Note</a><span class="split"></span><span class="title">我是标题</span><span class="date" id="title-date"><i class="fa fa-clock-o"></i> 2019-05-12</span></h1>
@@ -58,43 +58,47 @@
 	  
 
 	  <!-- content -->
-	  <p>问题：求解线性系统$Ax=b$ </p>
+	  <p>问题：求解线性系统<span class="math inline">\(Ax=b\)</span></p>
 <blockquote>
 <p><strong>共轭梯度法</strong>是求解系数矩阵为<a href="https://zh.wikipedia.org/wiki/对称" target="_blank" rel="noopener">对称</a><a href="https://zh.wikipedia.org/wiki/正定矩阵" target="_blank" rel="noopener">正定矩阵</a>的<a href="https://zh.wikipedia.org/wiki/线性方程组" target="_blank" rel="noopener">线性方程组</a>的<a href="https://zh.wikipedia.org/wiki/數值解" target="_blank" rel="noopener">数值解</a>的方法。共轭梯度法是一个<a href="https://zh.wikipedia.org/wiki/迭代方法" target="_blank" rel="noopener">迭代方法</a>，它适用于系数矩阵为<a href="https://zh.wikipedia.org/wiki/稀疏矩阵" target="_blank" rel="noopener">稀疏矩阵</a>的线性方程组，因为使用像<a href="https://zh.wikipedia.org/wiki/Cholesky分解" target="_blank" rel="noopener">Cholesky分解</a>这样的直接方法求解这些系统所需的计算量太大了。这种方程组在数值求解<a href="https://zh.wikipedia.org/wiki/偏微分方程" target="_blank" rel="noopener">偏微分方程</a>时很常见。共轭梯度法也可以用于求解无约束的<a href="https://zh.wikipedia.org/wiki/最优化" target="_blank" rel="noopener">最优化</a>问题。</p>
 </blockquote>
-<h1 id="Conjugate-Gradient"><a href="#Conjugate-Gradient" class="headerlink" title="Conjugate Gradient"></a>Conjugate Gradient</h1><p><a href="[https://flat2010.github.io/2018/10/26/%E5%85%B1%E8%BD%AD%E6%A2%AF%E5%BA%A6%E6%B3%95%E9%80%9A%E4%BF%97%E8%AE%B2%E4%B9%89/](https://flat2010.github.io/2018/10/26/共轭梯度法通俗讲义/)">详细过程翻译</a></p>
+<h1 id="conjugate-gradient">Conjugate Gradient</h1>
+<p><a href="%5Bhttps://flat2010.github.io/2018/10/26/%E5%85%B1%E8%BD%AD%E6%A2%AF%E5%BA%A6%E6%B3%95%E9%80%9A%E4%BF%97%E8%AE%B2%E4%B9%89/%5D(https://flat2010.github.io/2018/10/26/共轭梯度法通俗讲义/)">详细过程翻译</a></p>
 <blockquote>
-<p>It is a system of recurrence formulas that generates the unique sequence of iterates ${x_n\in K_n}$ with the property that at step n, $||e_n||_A$ is minimized.</p>
+<p>It is a system of recurrence formulas that generates the unique sequence of iterates <span class="math inline">\(\{x_n\in K_n\}\)</span> with the property that at step n, <span class="math inline">\(||e_n||_A\)</span> is minimized.</p>
 </blockquote>
 <ul>
 <li>概念</li>
 </ul>
-<p>A ($N\times N$ real matrix) 是对称正定矩阵(SPD)。有系统的唯一解记作 $x_*$。</p>
-<p>对于正定矩阵A，A-norm范数$||\cdot||_A$ 定义为 ：<br>$$<br>||x||_A=\sqrt{x^TAx}<br>$$<br> Krylov space：  $K = span(b, Ab,A^2b, . . . ,A^{n−1}b)$</p>
+<p>A (<span class="math inline">\(N\times N\)</span> real matrix) 是对称正定矩阵(SPD)。有系统的唯一解记作 <span class="math inline">\(x_*\)</span>。</p>
+<p>对于正定矩阵A，A-norm范数<span class="math inline">\(||\cdot||_A\)</span> 定义为 ： <span class="math display">\[
+||x||_A=\sqrt{x^TAx}
+\]</span> Krylov space： <span class="math inline">\(K = span(b, Ab,A^2b, . . . ,A^{n−1}b)\)</span></p>
 <ul>
-<li><strong>error</strong>:  how far from the solution</li>
+<li><strong>error</strong>: how far from the solution</li>
 </ul>
 <blockquote>
-<p> $e_n = x − x_n$ </p>
+<p><span class="math inline">\(e_n = x − x_n\)</span></p>
 </blockquote>
 <ul>
-<li><p><strong>residual</strong>: </p>
-<p>how far from the correct value of b, and direction of steepest descent. Error transformed by A into the same space as b.</p>
-</li>
+<li><p><strong>residual</strong>:</p>
+<p>how far from the correct value of b, and direction of steepest descent. Error transformed by A into the same space as b.</p></li>
 </ul>
 <blockquote>
-<p>  $r_n = Ae_n = b − Ax_n$</p>
+<p><span class="math inline">\(r_n = Ae_n = b − Ax_n\)</span></p>
 </blockquote>
-<p>Direction:  $-f’(x_i)=b-Ax(i)$</p>
-<p>$x(1)=x(0)+\alpha r(0)$</p>
-<p>==Theorem 1.== </p>
-<p>Among all $x\in K_n$,  $x_n$ is the unique one that minimizes $||e_n||_A$.</p>
-<p><strong>Corollary.</strong>    $||e_0||_A \geq ||e_1||_A \geq ||e_2||_A…$</p>
+<p>Direction: <span class="math inline">\(-f’(x_i)=b-Ax(i)\)</span></p>
+<p><span class="math inline">\(x(1)=x(0)+\alpha r(0)\)</span></p>
+<p>==Theorem 1.==</p>
+<p>Among all <span class="math inline">\(x\in K_n\)</span>, <span class="math inline">\(x_n\)</span> is the unique one that minimizes <span class="math inline">\(||e_n||_A\)</span>.</p>
+<p><strong>Corollary.</strong> <span class="math inline">\(||e_0||_A \geq ||e_1||_A \geq ||e_2||_A...\)</span></p>
 <ul>
 <li>CG iteration</li>
 </ul>
-<p>$$<br>f(x) = \frac{1}{2}x^TAx − x^Tb<br>$$</p>
-<p>![](img/Screen Shot 2019-12-04 at 3.38.23 PM.png)</p>
+<p><span class="math display">\[
+f(x) = \frac{1}{2}x^TAx − x^Tb
+\]</span></p>
+<p><img src="/notebook.github.io/notebook.github.io/2019/05/12/%E6%95%B0%E5%AD%A6/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/%E7%A8%80%E7%96%8F%E7%9F%A9%E9%98%B5/Screen%20Shot%202019-12-04%20at%203.38.23%20PM.png"></p>
 	  
 
 	  <div>
@@ -208,7 +212,7 @@
 	
 	
 	
-		<li class="prev"><a href="../../%E6%B3%9B%E5%87%BD%E5%88%86%E6%9E%90/%E8%B5%8B%E8%8C%83%E7%A9%BA%E9%97%B4/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>prev</a></li>
+		<li class="prev"><a href="../../%E6%B5%8B%E5%BA%A6/%E5%A4%A7%E7%BA%B2/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>prev</a></li>
 	
 	<li><a href="/notebook.github.io/"><i class="fa fa-archive"></i>Home</a></li>
 	
@@ -266,24 +270,7 @@
 	 }
 	 var path = "/notebook.github.io/" + search_path;
      searchFunc(path, 'local-search-input', 'local-search-result');
-   </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config("");
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-
-<script type="text/javascript" src="custom_mathjax_source">
-</script>
-<!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
+   </script>
 
 
 </body>

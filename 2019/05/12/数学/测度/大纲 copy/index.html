@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  <meta charset="utf-8">
   
   <title>数学/测度/大纲 Copy | Note</title>
   <meta name="author" content="Zhang Baihui">
@@ -36,13 +36,13 @@
 
   <script src="/notebook.github.io/js/jquery-2.0.3.min.js"></script>
 
-  <!-- analytics --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <!-- analytics -->
   
 
 </head>
 
 <body id="body" data-spy="scroll" data-target=".toc">
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container" id="container">
+  <div class="container" id="container">
 	<div class="content">
 	  <div class="page-header">		
   <h1><a class="brand" href="/notebook.github.io/">Note</a><span class="split"></span><span class="title">数学/测度/大纲 Copy</span><span class="date" id="title-date"><i class="fa fa-clock-o"></i> 2019-05-12</span></h1>
@@ -58,47 +58,49 @@
 	  
 
 	  <!-- content -->
-	  <h2 id="可测集"><a href="#可测集" class="headerlink" title="可测集"></a>可测集</h2><p>==$\sigma$-代数==</p>
+	  <h2 id="可测集">可测集</h2>
+<p>==<span class="math inline">\(\sigma\)</span>-代数==</p>
 <blockquote>
 <p>集合在可数操作下还是封闭的性质</p>
 <p>类比空间的结构性质.</p>
-<p>set $X$ , $A\subseteq P(X) $ is a $\sigma$-algebra, if $X\in A$ and $A$ is closed under the operations of taking $()^c$ and $\bigcup/ \bigcap$. </p>
+<p>set <span class="math inline">\(X\)</span> , $AP(X) $ is a <span class="math inline">\(\sigma\)</span>-algebra, if <span class="math inline">\(X\in A\)</span> and <span class="math inline">\(A\)</span> is closed under the operations of taking <span class="math inline">\(()^c\)</span> and <span class="math inline">\(\bigcup/ \bigcap\)</span>.</p>
 </blockquote>
-<ol>
-<li>$X\in F$</li>
-<li>$A\in F \Rightarrow A^c\in F$</li>
-<li>$A_n\in F,n=1,2,…\Rightarrow \bigcup^{\infin}_{n=1}A_n\in F$</li>
+<ol type="1">
+<li><span class="math inline">\(X\in F\)</span></li>
+<li><span class="math inline">\(A\in F \Rightarrow A^c\in F\)</span></li>
+<li><span class="math inline">\(A_n\in F,n=1,2,…\Rightarrow \bigcup^{\infin}_{n=1}A_n\in F\)</span></li>
 </ol>
-<p>![](img/Screen Shot 2020-03-10 at 12.08.46 PM.png)</p>
+<p><img src="/notebook.github.io/notebook.github.io/2019/05/12/%E6%95%B0%E5%AD%A6/%E6%B5%8B%E5%BA%A6/%E5%A4%A7%E7%BA%B2%20copy/Screen%20Shot%202020-03-10%20at%2012.08.46%20PM.png"></p>
 <p>==可测空间==</p>
 <blockquote>
 <p>measurable space</p>
 </blockquote>
-<p>$(X,A)$</p>
+<p><span class="math inline">\((X,A)\)</span></p>
 <p>==可测映射==</p>
 <blockquote>
 <p>类比开集的映射是开集等拓扑概念</p>
 </blockquote>
 <p>定义：</p>
-<p>$(X,m),(Y,n)$ </p>
-<p>A map $f: X\to Y$ is $(m,n)$-measurable.</p>
-<p>if $\forall S\in n$ , $f^{-1}(S)\in m$ .</p>
+<p><span class="math inline">\((X,m),(Y,n)\)</span></p>
+<p>A map <span class="math inline">\(f: X\to Y\)</span> is <span class="math inline">\((m,n)\)</span>-measurable.</p>
+<p>if <span class="math inline">\(\forall S\in n\)</span> , <span class="math inline">\(f^{-1}(S)\in m\)</span> .</p>
 <p>性质：</p>
-<p>给一个子集族，就能找到包含这个的最小 $\sigma$-algebra</p>
-<p>X: a set; $S\subseteq P(X)$: a family of subsets of X.</p>
-<p>$A(S):=\bigcap{A|A\ \text{is a $\sigma$-algebra on X containing S}}$</p>
-<p>is the smallest among all $\sigma$-algebra A on X containg S</p>
+<p>给一个子集族，就能找到包含这个的最小 <span class="math inline">\(\sigma\)</span>-algebra</p>
+<p>X: a set; <span class="math inline">\(S\subseteq P(X)\)</span>: a family of subsets of X.</p>
+<p><span class="math inline">\(A(S):=\bigcap\{A|A\ \text{is a $\sigma$-algebra on X containing S}\}\)</span></p>
+<p>is the smallest among all <span class="math inline">\(\sigma\)</span>-algebra A on X containg S</p>
 <p>典型例子</p>
-<p>Borel代数:$B_x=A({C|C \ \text{is a closed subset of X}})$</p>
-<p>Borel可测：$(B_X,B_Y)$ -measurable</p>
-<p>initial $\sigma$ -代数</p>
-<h2 id="测度空间"><a href="#测度空间" class="headerlink" title="测度空间"></a>测度空间</h2><p>![](img/Screen Shot 2020-03-10 at 12.17.20 PM.png)</p>
-<p>![](img/Screen Shot 2020-03-10 at 12.19.31 PM.png)</p>
-<p>$m: X\to Y$, if</p>
-<p>$Y$ 可测，X最小$\sigma$-algebra.</p>
-<p>$X$ 可测，Y最大$\sigma$-algebra.</p>
-<p>A ==measure space== $(X,m,\mu)$ consists of a measurable space $(X,m)$ and a positive measure $\mu$ on $(X,m)$.</p>
-<p>If $\mu(X)=1$, $(X,m,\mu)$ is a ==probability space==.</p>
+<p>Borel代数:<span class="math inline">\(B_x=A(\{C|C \ \text{is a closed subset of X\}})\)</span></p>
+<p>Borel可测：<span class="math inline">\((B_X,B_Y)\)</span> -measurable</p>
+<p>initial <span class="math inline">\(\sigma\)</span> -代数</p>
+<h2 id="测度空间">测度空间</h2>
+<p><img src="/notebook.github.io/notebook.github.io/2019/05/12/%E6%95%B0%E5%AD%A6/%E6%B5%8B%E5%BA%A6/%E5%A4%A7%E7%BA%B2%20copy/Screen%20Shot%202020-03-10%20at%2012.17.20%20PM.png"></p>
+<p><img src="/notebook.github.io/notebook.github.io/2019/05/12/%E6%95%B0%E5%AD%A6/%E6%B5%8B%E5%BA%A6/%E5%A4%A7%E7%BA%B2%20copy/Screen%20Shot%202020-03-10%20at%2012.19.31%20PM.png"></p>
+<p><span class="math inline">\(m: X\to Y\)</span>, if</p>
+<p><span class="math inline">\(Y\)</span> 可测，X最小<span class="math inline">\(\sigma\)</span>-algebra.</p>
+<p><span class="math inline">\(X\)</span> 可测，Y最大<span class="math inline">\(\sigma\)</span>-algebra.</p>
+<p>A ==measure space== <span class="math inline">\((X,m,\mu)\)</span> consists of a measurable space <span class="math inline">\((X,m)\)</span> and a positive measure <span class="math inline">\(\mu\)</span> on <span class="math inline">\((X,m)\)</span>.</p>
+<p>If <span class="math inline">\(\mu(X)=1\)</span>, <span class="math inline">\((X,m,\mu)\)</span> is a ==probability space==.</p>
 	  
 
 	  <div>
@@ -195,6 +197,10 @@
 	
 		
 			
+		
+	
+		
+			
 			
 		
 	
@@ -202,10 +208,6 @@
 			
 			
 			
-		
-			
-		
-	
 		
 			
 		
@@ -270,24 +272,7 @@
 	 }
 	 var path = "/notebook.github.io/" + search_path;
      searchFunc(path, 'local-search-input', 'local-search-result');
-   </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config("");
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-
-<script type="text/javascript" src="custom_mathjax_source">
-</script>
-<!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
+   </script>
 
 
 </body>

@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  <meta charset="utf-8">
   
   <title>数学/高等微积分/实数系 | Note</title>
   <meta name="author" content="Zhang Baihui">
@@ -36,13 +36,13 @@
 
   <script src="/notebook.github.io/js/jquery-2.0.3.min.js"></script>
 
-  <!-- analytics --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <!-- analytics -->
   
 
 </head>
 
 <body id="body" data-spy="scroll" data-target=".toc">
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container" id="container">
+  <div class="container" id="container">
 	<div class="content">
 	  <div class="page-header">		
   <h1><a class="brand" href="/notebook.github.io/">Note</a><span class="split"></span><span class="title">数学/高等微积分/实数系</span><span class="date" id="title-date"><i class="fa fa-clock-o"></i> 2020-04-05</span></h1>
@@ -59,19 +59,25 @@
 
 	  <!-- content -->
 	  <p><a href="http://sulley.cc/2019/08/16/baby-rudin-数学分析原理-笔记/" target="_blank" rel="noopener">http://sulley.cc/2019/08/16/baby-rudin-%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%E5%8E%9F%E7%90%86-%E7%AC%94%E8%AE%B0/</a></p>
-<h1 id="引子"><a href="#引子" class="headerlink" title="引子"></a>引子</h1><h2 id="构建有理数"><a href="#构建有理数" class="headerlink" title="构建有理数"></a>构建有理数</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>Define Q为等价类的集合<br>$$<br>\Q = {\frac{p}{q}:q\neq0\ \text{and}\ p,q\in \Z}<br>$$<br>where，$\frac{p}{q}$属于有序对的等价类, defined by等价关系$ \Z\times \Z$ \{0}. </p>
-<p>Let $(p,q)$~$(m,n)$, if $pn=qm$ and $q,n\neq 0$ </p>
+<h1 id="引子">引子</h1>
+<h2 id="构建有理数">构建有理数</h2>
+<h3 id="定义">定义</h3>
+<p>Define Q为等价类的集合 <span class="math display">\[
+\Q = \{\frac{p}{q}:q\neq0\ \text{and}\ p,q\in \Z\}
+\]</span> where，<span class="math inline">\(\frac{p}{q}\)</span>属于有序对的等价类, defined by等价关系$ $ \{0}.</p>
+<p>Let <span class="math inline">\((p,q)\)</span>~<span class="math inline">\((m,n)\)</span>, if <span class="math inline">\(pn=qm\)</span> and <span class="math inline">\(q,n\neq 0\)</span></p>
 <blockquote>
 <ul>
-<li><p>比如$(2,3)$~$(4,6)$</p>
-</li>
-<li><p>Q extends Z， Z is embedded in Q . 注意到Z={n/1} </p>
-</li>
+<li><p>比如<span class="math inline">\((2,3)\)</span>~<span class="math inline">\((4,6)\)</span></p></li>
+<li><p>Q extends Z， Z is embedded in Q . 注意到Z={n/1}</p></li>
 </ul>
 <p>需要 注意等价关系定义：（1）自反（2）对称（3）传递性</p>
 </blockquote>
-<p><img src="https://tva1.sinaimg.cn/large/00831rSTgy1gdkb3qeaxhj30nk0n4qcc.jpg" alt="截屏2020-04-0518.03.48"></p>
-<h3 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h3><ul>
+<figure>
+<img src="https://tva1.sinaimg.cn/large/00831rSTgy1gdkb3qeaxhj30nk0n4qcc.jpg" alt><figcaption>截屏2020-04-0518.03.48</figcaption>
+</figure>
+<h3 id="性质">性质</h3>
+<ul>
 <li>算数性质 arithmetic</li>
 </ul>
 <p>定义加法，乘法</p>
@@ -79,26 +85,35 @@
 <ul>
 <li>Q有order</li>
 </ul>
-<h3 id="Field"><a href="#Field" class="headerlink" title="Field"></a>Field</h3><p><img src="https://tva1.sinaimg.cn/large/00831rSTgy1gdkb3wocfkj314i0u0x2a.jpg" alt="截屏2020-04-0518.28.12"></p>
+<h3 id="field">Field</h3>
+<figure>
+<img src="https://tva1.sinaimg.cn/large/00831rSTgy1gdkb3wocfkj314i0u0x2a.jpg" alt><figcaption>截屏2020-04-0518.28.12</figcaption>
+</figure>
 <p>order field</p>
-<p><img src="https://tva1.sinaimg.cn/large/00831rSTgy1gdkb32dfg8j31820puww0.jpg" alt="截屏2020-04-0621.11.39"></p>
-<h2 id="引出无理数"><a href="#引出无理数" class="headerlink" title="引出无理数"></a>引出无理数</h2><p>$x^2=\frac{p^2}{q^2}=2$<br>$$<br>p^2=2q^2<br>$$<br>$p^2$ Is even, then p is even. </p>
-<p>令 $p=2m$, 则 $2m^2=q^2$ , 则，q也是偶数。 =》矛盾（最简）</p>
+<figure>
+<img src="https://tva1.sinaimg.cn/large/00831rSTgy1gdkb32dfg8j31820puww0.jpg" alt><figcaption>截屏2020-04-0621.11.39</figcaption>
+</figure>
+<h2 id="引出无理数">引出无理数</h2>
+<p><span class="math inline">\(x^2=\frac{p^2}{q^2}=2\)</span> <span class="math display">\[
+p^2=2q^2
+\]</span> <span class="math inline">\(p^2\)</span> Is even, then p is even.</p>
+<p>令 <span class="math inline">\(p=2m\)</span>, 则 <span class="math inline">\(2m^2=q^2\)</span> , 则，q也是偶数。 =》矛盾（最简）</p>
 <p>所以x没有有理解。</p>
-<h1 id="构建实数"><a href="#构建实数" class="headerlink" title="构建实数"></a>构建实数</h1><p>最小上界定理 least upper bound/ lower bound</p>
-<ol>
+<h1 id="构建实数">构建实数</h1>
+<p>最小上界定理 least upper bound/ lower bound</p>
+<ol type="1">
 <li>complete order field</li>
 <li>Lub 性质</li>
 <li>extend Q</li>
 </ol>
 <p>通过有理数构造实数的方法称为“戴德金分划”（Dedekind Cut）</p>
-<p>Q为有理数集，A和B是Q的两个子集。如果A和B满足以下条件，那么它们组成的有序对(A,B)称为一个Q的分划：  1. A和B都非空。 1. A和B的并集等于Q。(eq(Q,cup(A,B))) 1. 任意A中元素都小于任意B中元素。</p>
-<p>要学习的首条性质很重要，它使得实数集区别于有理数集——<strong>非空有上界的实数集在实数集内有最小上界（上确界）</strong><a href="https://www.cnblogs.com/imath/p/8257142.html#fn7" target="_blank" rel="noopener">[7]</a><strong>，</strong>称为<strong>实数集的最小上界性质</strong>（Least upper bound property of R）<strong>。</strong></p>
+<p>Q为有理数集，A和B是Q的两个子集。如果A和B满足以下条件，那么它们组成的有序对(A,B)称为一个Q的分划： 1. A和B都非空。 1. A和B的并集等于Q。(eq(Q,cup(A,B))) 1. 任意A中元素都小于任意B中元素。</p>
+<p>要学习的首条性质很重要，它使得实数集区别于有理数集------<strong>非空有上界的实数集在实数集内有最小上界（上确界）</strong>[<a href="https://www.cnblogs.com/imath/p/8257142.html#fn7" target="_blank" rel="noopener">7]</a><strong>，</strong>称为<strong>实数集的最小上界性质</strong>（Least upper bound property of R）<strong>。</strong></p>
 <p>戴德金分割</p>
-<p>是将有理数的集合分成两个非空不相交的子集A与B，使得A中的每一个元素小于B中的每一个元素。戴德金把这种划分定义为是对有理数的一个分割，记为（A，B）。因此，戴德金就把一切实数组成的集合R定义为有理数集的一切分割，而一个实数a就是一个分割（A，B）。在这一定义中，由一个给定的有理数r产生的两个实质上等价的分割被看成是同一的。戴德金方法定义的实数的确比较晦涩难懂。其实通俗一点来说，这个方法就是认为直线没有被有理数填满，还有“空隙”存在，那么这个分割就是在数轴上切一刀，把现有的有理数分成两部分，如果这一刀恰好切在了一个有理数上，那么这个分割就是一个有理数，反之，就是一个无理数。  </p>
-<p>一个对有理数的分割（A，B），戴德金是这样定义的： </p>
-<p>定义（分割） 将有理数全体组成的集合分成A，B两类,使满足以下性质：<br>1） A与B 都至少包含一个有理数（不空）；<br>2）任意一个有理数或属于A，或属于B （不漏）；<br>3） A中任一数a 均小于B 中任一数b ，即a A；b B a &lt; b（不乱）；<br>4） A中没有最大的数，即a A ，$ a A ，使a &lt; a 。 </p>
-<p>则称A， B 为有理数的一个分割。 </p>
+<p>是将有理数的集合分成两个非空不相交的子集A与B，使得A中的每一个元素小于B中的每一个元素。戴德金把这种划分定义为是对有理数的一个分割，记为（A，B）。因此，戴德金就把一切实数组成的集合R定义为有理数集的一切分割，而一个实数a就是一个分割（A，B）。在这一定义中，由一个给定的有理数r产生的两个实质上等价的分割被看成是同一的。戴德金方法定义的实数的确比较晦涩难懂。其实通俗一点来说，这个方法就是认为直线没有被有理数填满，还有“空隙”存在，那么这个分割就是在数轴上切一刀，把现有的有理数分成两部分，如果这一刀恰好切在了一个有理数上，那么这个分割就是一个有理数，反之，就是一个无理数。</p>
+<p>一个对有理数的分割（A，B），戴德金是这样定义的：</p>
+<p>定义（分割） 将有理数全体组成的集合分成A，B两类,使满足以下性质： 1） A与B 都至少包含一个有理数（不空）； 2）任意一个有理数或属于A，或属于B （不漏）； 3） A中任一数a 均小于B 中任一数b ，即a A；b B a &lt; b（不乱）； 4） A中没有最大的数，即a A ，$ a A ，使a &lt; a 。</p>
+<p>则称A， B 为有理数的一个分割。</p>
 <p>其中，定义中4）用到了有理数的稠密性（即任意两个有理数之间必有一有理数），如A有最大数，将此数放入B ，则它是B 的最小数，这时A就无最大数；因为若A还有最大数，根据有理数的稠密性， A的最大数与B 的最小数（原来A的最大数）之间必有一有理数，这个有理数被漏掉了，这与分划的定义矛盾。 分割分为有理分割和无理分割，有理数的任意一个有理分割对应一个有理数，有理数的任意一个无理分割对应一个无理数，有理数与无理数统称为实数。</p>
 <p>##实数基本定理</p>
 <p>无理数</p>
@@ -274,24 +289,7 @@
 	 }
 	 var path = "/notebook.github.io/" + search_path;
      searchFunc(path, 'local-search-input', 'local-search-result');
-   </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config("");
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-
-<script type="text/javascript" src="custom_mathjax_source">
-</script>
-<!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
+   </script>
 
 
 </body>
