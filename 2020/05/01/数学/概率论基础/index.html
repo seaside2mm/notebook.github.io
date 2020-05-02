@@ -68,115 +68,115 @@
 
 	  <!-- content -->
 	  <p>MIT概率导论的学习总结。</p>
-<h2 id="1-概率模型"><a href="#1-概率模型" class="headerlink" title="1 概率模型"></a>1 概率模型</h2><h3 id="1-1-集合"><a href="#1-1-集合" class="headerlink" title="1.1 集合"></a>1.1 集合</h3><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxww9m96ej30pl09qtb7.jpg" alt></p>
-<h3 id="1-2-样本空间"><a href="#1-2-样本空间" class="headerlink" title="1.2 样本空间"></a>1.2 样本空间</h3><h3 id="选择适当的样本空间"><a href="#选择适当的样本空间" class="headerlink" title="选择适当的样本空间"></a>选择适当的样本空间</h3><p>Mutually exclusive </p>
-<p>Collectively exhaustive</p>
-<p>Right granularity</p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxwwfjnpgj30sl03uacz.jpg" alt></p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxwwgmizij30sm0aygp4.jpg" alt></p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxwwip0zzj30or0bcqbw.jpg" alt></p>
-<h3 id="概率律"><a href="#概率律" class="headerlink" title="概率律"></a>概率律</h3><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxwwkfiu7j30q90btn0n.jpg" alt></p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxwwo64wej30t60er0yn.jpg" alt></p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxwwrwiffj30ri09sdi6.jpg" alt></p>
+<h2 id="1-概率模型"><a href="#1-概率模型" class="headerlink" title="1 概率模型"></a>1 概率模型</h2><h3 id="1-1-样本空间与概率公理"><a href="#1-1-样本空间与概率公理" class="headerlink" title="1.1 样本空间与概率公理"></a>1.1 样本空间与概率公理</h3><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gee8qpfd88j319i0psn9k.jpg" alt="截屏2020-05-02 18.37.27"><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxwwkfiu7j30q90btn0n.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gee8vsgal7j31ae04k17l.jpg" alt="截屏2020-05-02 18.42.25"><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gee8wogcduj30or0bcdmg.jpg" alt></p>
 <p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxwwse83rj30rb09p76a.jpg" alt></p>
-<h3 id="1-3-条件概率"><a href="#1-3-条件概率" class="headerlink" title="1.3 条件概率"></a>1.3 条件概率</h3><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxwwv749aj30rd0jnjvy.jpg" alt></p>
-<h4 id="利用条件概率定义概率模型"><a href="#利用条件概率定义概率模型" class="headerlink" title="利用条件概率定义概率模型"></a>利用条件概率定义概率模型</h4><h3 id="1-4-核心法则"><a href="#1-4-核心法则" class="headerlink" title="1.4 核心法则"></a>1.4 核心法则</h3><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxwwx17fsj30mv06ywg8.jpg" alt></p>
-<p>乘法法则 链式法则 贝叶斯法则</p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxwx19yoxj30d207cq3g.jpg" alt></p>
-<h4 id="全概率定理与贝叶斯定理"><a href="#全概率定理与贝叶斯定理" class="headerlink" title="全概率定理与贝叶斯定理"></a>全概率定理与贝叶斯定理</h4><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxwxbiicgj30tn0i40vd.jpg" alt></p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxwxbyjf3j30oy05igq0.jpg" alt></p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxwxefib2j30od04nq6q.jpg" alt></p>
-<p>两种不同思想</p>
-<p>$A_i\to B$: </p>
+<h3 id="1-2-核心法则"><a href="#1-2-核心法则" class="headerlink" title="1.2 核心法则"></a>1.2 核心法则</h3><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gee9ht6nz9j30mv06ymyu.jpg" alt></p>
+<ul>
+<li>条件概率</li>
+</ul>
+<script type="math/tex; mode=display">
+P(A|B)=\frac{P(A)\cap P(B)}{P(B)}</script><ul>
+<li>乘法法则</li>
+</ul>
+<script type="math/tex; mode=display">
+P(A\cap B)=P(B)\cdot P(A\mid B)=P(A)\cdot P(B\mid A)</script><ul>
+<li>链式法则</li>
+</ul>
 <blockquote>
-<p>不同scenario得到结果B的概率$P(B|A_i)$;</p>
+<p>乘法法则推广到N个事件</p>
 </blockquote>
-<p>$A_i\leftarrow B$</p>
-<blockquote>
-<p>已知结果，inference是scenario $A_i$的概率$P(A_i|B)$;</p>
-<p>如何从部分观测到的经验中或者实验数据中学习</p>
-</blockquote>
-<h3 id="1-5-独立概率"><a href="#1-5-独立概率" class="headerlink" title="1.5 独立概率"></a>1.5 独立概率</h3><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxwxh8qxdj30qn0lvwim.jpg" alt></p>
-<h3 id="1-6-总结"><a href="#1-6-总结" class="headerlink" title="1.6 总结"></a>1.6 总结</h3><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxwxmvhs2j30oj0cc7bf.jpg" alt></p>
+<script type="math/tex; mode=display">
+P(X_1,X_2,…,X_n)=P(X_1)P(X_2|X_1)...P(X_n|X_1,X_2,…,X_{n−1})</script><ul>
+<li>全概率定理</li>
+</ul>
+<script type="math/tex; mode=display">
+P(B)=P(A)P(B\mid A)+P(A^c)P(B\mid A^c)</script><ul>
+<li>贝叶斯法则</li>
+</ul>
+<script type="math/tex; mode=display">
+P(A_i\mid B)=\frac{P(A_i)P(B\mid A_i)}{P(B)}</script><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxwxbiicgj30tn0i40vd.jpg" alt><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxwxbyjf3j30oy05igq0.jpg" alt></p>
+<ul>
+<li>独立概率</li>
+</ul>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxwxh8qxdj30qn0lvwim.jpg" alt></p>
+<h3 id="1-3-总结"><a href="#1-3-总结" class="headerlink" title="1.3 总结"></a>1.3 总结</h3><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxwxmvhs2j30oj0cc7bf.jpg" alt></p>
 <p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxwxk3bo7j30of0d8qbw.jpg" alt></p>
-<h1 id="2-离散变量"><a href="#2-离散变量" class="headerlink" title="2 离散变量"></a>2 离散变量</h1><h2 id="2-1-基本概念"><a href="#2-1-基本概念" class="headerlink" title="2.1 基本概念"></a>2.1 基本概念</h2><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxwxsxn53j30rd0epq70.jpg" alt></p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxwxwqyu0j30rf0ee431.jpg" alt></p>
-<h2 id="2-2-Probability-Mass-Function"><a href="#2-2-Probability-Mass-Function" class="headerlink" title="2.2 Probability Mass Function"></a>2.2 Probability Mass Function</h2><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxwy9t8iyj30o60ktaev.jpg" alt></p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxwydyukvj30rd06ymyp.jpg" alt></p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxwyi7h1cj30o708i0vg.jpg" alt></p>
-<h2 id="2-3-期望与方差"><a href="#2-3-期望与方差" class="headerlink" title="2.3 期望与方差"></a>2.3 期望与方差</h2><script type="math/tex; mode=display">
-E(X)=\sum_x x p_X(x)\\
-E(Y)=\sum_x g(x) p_X(x)=\sum_y y p_Y(x) \quad (Y=g(X))</script><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxwynd6emj30re0dz40l.jpg" alt></p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxwyq4txvj30rb04i0td.jpg" alt></p>
-<h2 id="2-4-多个随机变量的联合分布列"><a href="#2-4-多个随机变量的联合分布列" class="headerlink" title="2.4 多个随机变量的联合分布列"></a>2.4 多个随机变量的联合分布列</h2><p>多个随机变量是指在同一个试验结果之下产生的多个随机变量，它们所设计的样本空间和概率律是相同的。</p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxwyszhrdj30lr0h9tco.jpg" alt></p>
-<h3 id="多个随机变量的函数"><a href="#多个随机变量的函数" class="headerlink" title="多个随机变量的函数"></a>多个随机变量的函数</h3><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxwyuumdoj30nc07g0vc.jpg" alt></p>
+<h2 id="2-离散变量"><a href="#2-离散变量" class="headerlink" title="2 离散变量"></a>2 离散变量</h2><h3 id="2-1-概率质量函数"><a href="#2-1-概率质量函数" class="headerlink" title="2.1 概率质量函数"></a>2.1 概率质量函数</h3><h4 id="随机变量"><a href="#随机变量" class="headerlink" title="随机变量"></a>随机变量</h4><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gee9q2317vj30yd0u019f.jpg" alt="截屏2020-05-02 19.11.26"><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gee9s91wj8j31b20mq46h.jpg" alt="截屏2020-05-02 19.13.23"></p>
+<ul>
+<li><p>分布列（PMF）</p>
+<p>也就是概率质量函数。</p>
+</li>
+</ul>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gee9trvut7j30u012le21.jpg" alt="截屏2020-05-02 19.15.00"><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxwyi7h1cj30o708i0vg.jpg" alt></p>
+<h4 id="联合分布列"><a href="#联合分布列" class="headerlink" title="==联合分布列=="></a>==联合分布列==</h4><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxwyszhrdj30lr0h9tco.jpg" alt></p>
+<h4 id="随机变量的函数"><a href="#随机变量的函数" class="headerlink" title="==随机变量的函数=="></a>==随机变量的函数==</h4><blockquote>
+<p>多个随机变量是指在同一个试验结果之下产生的多个随机变量，它们的样本空间和概率律是相同的。</p>
+</blockquote>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxwyuumdoj30nc07g0vc.jpg" alt></p>
 <p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxwz1d98ej30mb0l2tct.jpg" alt></p>
-<h2 id="2-5-Conditional-PMF"><a href="#2-5-Conditional-PMF" class="headerlink" title="2.5 Conditional PMF"></a>2.5 Conditional PMF</h2><h3 id="2-5-1-某个事件发生的条件下的随机变量"><a href="#2-5-1-某个事件发生的条件下的随机变量" class="headerlink" title="2.5.1 某个事件发生的条件下的随机变量"></a>2.5.1 某个事件发生的条件下的随机变量</h3><p><img src="/notebook.github.io/notebook.github.io/2020/05/01/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/Screen Shot 2020-03-19 at 11.09.04 AM.png" alt></p>
-<h4 id="图示理解"><a href="#图示理解" class="headerlink" title="图示理解"></a>图示理解</h4><p>2-13</p>
-<p><img src="/notebook.github.io/notebook.github.io/2020/05/01/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/Screen Shot 2020-03-19 at 11.14.24 AM.png" alt></p>
-<p><img src="/notebook.github.io/notebook.github.io/2020/05/01/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/Screen Shot 2020-03-19 at 11.17.12 AM.png" alt></p>
-<h3 id="2-5-2-给定另一个随机变量的值的条件下的随机变量"><a href="#2-5-2-给定另一个随机变量的值的条件下的随机变量" class="headerlink" title="2.5.2 给定另一个随机变量的值的条件下的随机变量"></a>2.5.2 给定另一个随机变量的值的条件下的随机变量</h3><p><img src="/notebook.github.io/notebook.github.io/2020/05/01/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/Screen Shot 2020-03-19 at 11.21.59 AM.png" alt></p>
-<p><img src="/notebook.github.io/notebook.github.io/2020/05/01/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/Screen Shot 2020-03-19 at 11.23.27 AM.png" alt></p>
-<p><img src="/notebook.github.io/notebook.github.io/2020/05/01/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/Screen Shot 2020-03-12 at 8.31.00 PM.png" style="zoom:150%;"></p>
-<h3 id="2-5-3-条件期望"><a href="#2-5-3-条件期望" class="headerlink" title="2.5.3 条件期望"></a>2.5.3 条件期望</h3><p><img src="/notebook.github.io/notebook.github.io/2020/05/01/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/Screen Shot 2020-03-19 at 11.29.55 AM.png" alt></p>
-<p><img src="/notebook.github.io/notebook.github.io/2020/05/01/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/Screen Shot 2020-03-12 at 8.32.37 PM.png" style="zoom:150%;"></p>
-<h2 id="2-6-独立"><a href="#2-6-独立" class="headerlink" title="2.6 独立"></a>2.6 独立</h2><h3 id="随机变量与事件的独立性"><a href="#随机变量与事件的独立性" class="headerlink" title="随机变量与事件的独立性"></a>随机变量与事件的独立性</h3><p><img src="/notebook.github.io/notebook.github.io/2020/05/01/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/Screen Shot 2020-03-19 at 11.33.08 AM.png" alt></p>
-<h3 id="随机变量之间的独立性"><a href="#随机变量之间的独立性" class="headerlink" title="随机变量之间的独立性"></a>随机变量之间的独立性</h3><p><img src="/notebook.github.io/notebook.github.io/2020/05/01/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/Screen Shot 2020-03-19 at 11.36.43 AM.png" alt></p>
-<p><img src="/notebook.github.io/notebook.github.io/2020/05/01/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/Screen Shot 2020-03-12 at 8.29.33 PM.png" alt></p>
-<h2 id="2-7-常见PMF"><a href="#2-7-常见PMF" class="headerlink" title="2.7 常见PMF"></a>2.7 常见PMF</h2><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxp8lkpgoj30qi0g6422.jpg" alt></p>
+<h3 id="2-3-条件PMF"><a href="#2-3-条件PMF" class="headerlink" title="2.3 条件PMF"></a>2.3 条件PMF</h3><h4 id="某个事件发生的条件下的随机变量"><a href="#某个事件发生的条件下的随机变量" class="headerlink" title="某个事件发生的条件下的随机变量"></a>某个事件发生的条件下的随机变量</h4><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1geea6p1w1rj30q90e7tcb.jpg" alt></p>
+<ul>
+<li>帮助理解的例子</li>
+</ul>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1geea6j0jmuj30pg0kdgq1.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1geea6h6vu0j30oq0dgae8.jpg" alt></p>
+<h4 id="给定另一个随机变量的值的条件下的随机变量"><a href="#给定另一个随机变量的值的条件下的随机变量" class="headerlink" title="给定另一个随机变量的值的条件下的随机变量"></a>给定另一个随机变量的值的条件下的随机变量</h4><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1geea6f5xt4j30sh0hd7ag.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1geea6c2bdxj30o90lg792.jpg" alt></p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1geea33rlycj30ga0m042o.jpg" style="zoom:150%;"></p>
+<h3 id="2-3-独立"><a href="#2-3-独立" class="headerlink" title="2.3 独立"></a>2.3 独立</h3><h4 id="随机变量与事件的独立性"><a href="#随机变量与事件的独立性" class="headerlink" title="随机变量与事件的独立性"></a>随机变量与事件的独立性</h4><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1geea73y02hj30si0bxwhl.jpg" alt></p>
+<h4 id="随机变量之间的独立性"><a href="#随机变量之间的独立性" class="headerlink" title="随机变量之间的独立性"></a>随机变量之间的独立性</h4><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1geea6y06tvj30sc0l2wkt.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1geea83lojmj30md0m0n1o.jpg" alt></p>
+<h3 id="2-4-常见PMF"><a href="#2-4-常见PMF" class="headerlink" title="2.4 ==常见PMF=="></a>2.4 ==常见PMF==</h3><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxp8lkpgoj30qi0g6422.jpg" alt></p>
 <p><img src="/notebook.github.io/notebook.github.io/2020/05/01/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/Screen Shot 2020-03-12 at 8.27.37 PM.png" alt></p>
 <p><img src="/notebook.github.io/notebook.github.io/2020/05/01/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/Screen Shot 2020-03-12 at 8.28.10 PM.png" alt></p>
 <h4 id="二项分布"><a href="#二项分布" class="headerlink" title="二项分布"></a>二项分布</h4><p><img src="/notebook.github.io/notebook.github.io/2020/05/01/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/Screen Shot 2020-03-12 at 8.40.58 PM.png" alt></p>
 <h4 id="几何分布"><a href="#几何分布" class="headerlink" title="几何分布"></a>几何分布</h4><p><img src="/notebook.github.io/notebook.github.io/2020/05/01/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/Screen Shot 2020-03-12 at 8.42.19 PM.png" alt></p>
 <h4 id="泊松分布"><a href="#泊松分布" class="headerlink" title="泊松分布"></a>泊松分布</h4><p><img src="/notebook.github.io/notebook.github.io/2020/05/01/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/Screen Shot 2020-03-12 at 8.42.57 PM.png" alt></p>
-<h1 id="3-连续变量"><a href="#3-连续变量" class="headerlink" title="3 连续变量"></a>3 连续变量</h1><h2 id="3-1-概率密度函数PDF"><a href="#3-1-概率密度函数PDF" class="headerlink" title="3.1 概率密度函数PDF"></a>3.1 概率密度函数PDF</h2><h3 id="3-1-1-连续随机变量"><a href="#3-1-1-连续随机变量" class="headerlink" title="3.1.1 连续随机变量"></a>3.1.1 连续随机变量</h3><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxo951j9lj30qk0diq4y.jpg" alt></p>
+<h3 id="2-2-期望与方差"><a href="#2-2-期望与方差" class="headerlink" title="2.2 期望与方差"></a>2.2 期望与方差</h3><script type="math/tex; mode=display">
+E(X)=\sum_x x p_X(x)\\E(Y)=\sum_x g(x) p_X(x)=\sum_y y p_Y(x) \quad (Y=g(X))</script><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxwynd6emj30re0dz40l.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxwyq4txvj30rb04i0td.jpg" alt></p>
+<h3 id="2-5-3-条件期望"><a href="#2-5-3-条件期望" class="headerlink" title="2.5.3 条件期望"></a>2.5.3 条件期望</h3><p><img src="/notebook.github.io/notebook.github.io/2020/05/01/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/Screen Shot 2020-03-19 at 11.29.55 AM.png" alt></p>
+<p><img src="/notebook.github.io/notebook.github.io/2020/05/01/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/Screen Shot 2020-03-12 at 8.32.37 PM.png" style="zoom:150%;"></p>
+<h3 id="3-1-2-期望"><a href="#3-1-2-期望" class="headerlink" title="3.1.2 期望"></a>3.1.2 期望</h3><p><img src="/notebook.github.io/notebook.github.io/2020/05/01/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/Screen Shot 2020-03-12 at 2.23.24 PM.png" alt></p>
+<h2 id><a href="#" class="headerlink" title="#"></a>#</h2><h2 id="3-连续变量"><a href="#3-连续变量" class="headerlink" title="3 连续变量"></a>3 连续变量</h2><h3 id="3-1-概率密度函数"><a href="#3-1-概率密度函数" class="headerlink" title="3.1 概率密度函数"></a>3.1 概率密度函数</h3><h4 id="连续随机变量"><a href="#连续随机变量" class="headerlink" title="连续随机变量"></a>连续随机变量</h4><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxo951j9lj30qk0diq4y.jpg" alt></p>
 <blockquote>
 <p>需要满足样本空间概率为1的性质。</p>
 </blockquote>
-<p><img src="/notebook.github.io/notebook.github.io/2020/05/01/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/Screen Shot 2020-03-12 at 2.11.50 PM.png" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1geeadhfpk3j30pf0c1adk.jpg" alt></p>
 <ul>
 <li>深入理解连续r.v.</li>
 </ul>
-<p><img src="/notebook.github.io/notebook.github.io/2020/05/01/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/Screen Shot 2020-03-12 at 2.10.35 PM.png" alt></p>
-<h3 id="3-1-2-期望"><a href="#3-1-2-期望" class="headerlink" title="3.1.2 期望"></a>3.1.2 期望</h3><p><img src="/notebook.github.io/notebook.github.io/2020/05/01/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/Screen Shot 2020-03-12 at 2.23.24 PM.png" alt></p>
-<h3 id="3-1-3-常见随机变量的PDF"><a href="#3-1-3-常见随机变量的PDF" class="headerlink" title="3.1.3 常见随机变量的PDF"></a>3.1.3 常见随机变量的PDF</h3><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxoeeg5d2j30r40cy0v8.jpg" alt></p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxoegeuuzj30q80knacc.jpg" alt></p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxoeirbmvj30kj08hq5a.jpg" alt></p>
-<h2 id="3-2-累积分布函数CDF"><a href="#3-2-累积分布函数CDF" class="headerlink" title="3.2 累积分布函数CDF"></a>3.2 累积分布函数CDF</h2><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxogfnpwjj30sm0700xx.jpg" alt></p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxogirqugj30k504mweo.jpg" alt></p>
-<h3 id="3-2-1离散情况的图解"><a href="#3-2-1离散情况的图解" class="headerlink" title="3.2.1离散情况的图解"></a>3.2.1离散情况的图解</h3><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxoh7zgcjj30n50hbdis.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1geeadleg8qj30r10f3q7i.jpg" alt></p>
+<h3 id="3-2-累积分布函数CDF"><a href="#3-2-累积分布函数CDF" class="headerlink" title="3.2 累积分布函数CDF"></a>3.2 累积分布函数CDF</h3><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxogfnpwjj30sm0700xx.jpg" alt><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxogirqugj30k504mweo.jpg" alt></p>
+<h4 id="离散情况"><a href="#离散情况" class="headerlink" title="离散情况"></a>离散情况</h4><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxoh7zgcjj30n50hbdis.jpg" alt></p>
 <blockquote>
 <p>跳跃点取右端值</p>
 </blockquote>
-<h3 id="3-2-2-连续情况的图解"><a href="#3-2-2-连续情况的图解" class="headerlink" title="3.2.2 连续情况的图解"></a>3.2.2 连续情况的图解</h3><ul>
+<h4 id="连续情况的图解"><a href="#连续情况的图解" class="headerlink" title="连续情况的图解"></a>连续情况的图解</h4><ul>
 <li>均匀</li>
 </ul>
 <p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxoljbzdgj30ll0jc0w7.jpg" alt></p>
 <ul>
-<li>分段</li>
+<li><p>分段</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1geeaein8d9j30o603egm5.jpg" style="zoom:67%;"></p>
+</li>
 </ul>
-<p><img src="/notebook.github.io/notebook.github.io/2020/05/01/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/Screen Shot 2020-03-12 at 2.19.32 PM.png" alt></p>
-<p><img src="/notebook.github.io/notebook.github.io/2020/05/01/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/Screen Shot 2020-03-12 at 2.20.19 PM.png" alt></p>
-<ul>
-<li>总结</li>
-</ul>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxolnfuz1j30i60lhq6y.jpg" alt></p>
-<h3 id="3-2-3-几何与指数随机变量"><a href="#3-2-3-几何与指数随机变量" class="headerlink" title="3.2.3 几何与指数随机变量"></a>3.2.3 几何与指数随机变量</h3><p>几何随机变量的分布函数</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1geeaejyt3ij30mz0akwg2.jpg" alt></p>
+<h4 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h4><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxolnfuz1j30i60lhq6y.jpg" alt></p>
+<h3 id="3-3-重要分布"><a href="#3-3-重要分布" class="headerlink" title="3.3 重要分布"></a>3.3 重要分布</h3><h4 id="指数随机变量的分布"><a href="#指数随机变量的分布" class="headerlink" title="指数随机变量的分布"></a>指数随机变量的分布</h4><p>讨论几何随机变量和指数随机变量的关系。</p>
 <p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxouaob2wj31fe0agaey.jpg" alt="截屏2020-04-18 10.59.58"></p>
-<p>也可知指数随机变量的分布函数</p>
-<p><img src="/notebook.github.io/notebook.github.io/2020/05/01/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/Screen Shot 2020-03-12 at 4.46.04 PM.png" alt></p>
-<ul>
-<li>讨论几何随机变量和指数随机变量的关系。</li>
-</ul>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1geeaj007gbj30or070q42.jpg" alt></p>
 <p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxp434xaqj31400u07ub.jpg" alt="截屏2020-04-18 11.09.23"></p>
-<h2 id="3-3-一元正态分布"><a href="#3-3-一元正态分布" class="headerlink" title="3.3 一元正态分布"></a>3.3 一元正态分布</h2><p><img src="/notebook.github.io/notebook.github.io/2020/05/01/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/Screen Shot 2020-03-12 at 4.26.39 PM.png" alt></p>
-<p><img src="/notebook.github.io/notebook.github.io/2020/05/01/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/Screen Shot 2020-03-12 at 4.27.16 PM.png" alt></p>
-<p><img src="/notebook.github.io/notebook.github.io/2020/05/01/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/Screen Shot 2020-03-12 at 4.28.10 PM.png" alt></p>
-<h3 id="3-3-1-标准化"><a href="#3-3-1-标准化" class="headerlink" title="3.3.1 标准化"></a>3.3.1 标准化</h3><p><img src="/notebook.github.io/notebook.github.io/2020/05/01/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/Screen Shot 2020-03-12 at 4.30.21 PM.png" alt></p>
-<p><img src="/notebook.github.io/notebook.github.io/2020/05/01/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/Screen Shot 2020-03-12 at 4.31.43 PM.png" alt></p>
-<p><img src="../../../../../../Library/Application Support/typora-user-images/截屏2020-04-18 11.17.08.png" alt="截屏2020-04-18 11.17.08"></p>
-<h2 id="3-4-联合"><a href="#3-4-联合" class="headerlink" title="==3.4 联合=="></a>==3.4 联合==</h2><h3 id="3-4-1-多个随机变量的联合概率密度"><a href="#3-4-1-多个随机变量的联合概率密度" class="headerlink" title="3.4.1 多个随机变量的联合概率密度"></a>3.4.1 多个随机变量的联合概率密度</h3><p><img src="/notebook.github.io/notebook.github.io/2020/05/01/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/Screen Shot 2020-03-12 at 4.37.49 PM.png" alt></p>
+<h4 id="一元正态分布"><a href="#一元正态分布" class="headerlink" title="一元正态分布"></a>一元正态分布</h4><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1geeaiotyc6j30pm08476g.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1geeaip6xl7j30q50gntch.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1geeaisj834j30r40bdjtc.jpg" alt></p>
+<h5 id="标准化"><a href="#标准化" class="headerlink" title="标准化"></a>标准化</h5><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1geeaijtpjpj30r70kn43l.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1geeaiimldcj30ra0c1wha.jpg" alt></p>
+<h4 id="总结-2"><a href="#总结-2" class="headerlink" title="总结"></a>总结</h4><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxoeeg5d2j30r40cy0v8.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxoegeuuzj30q80knacc.jpg" alt></p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxoeirbmvj30kj08hq5a.jpg" alt></p>
+<h2 id="3-4-联合"><a href="#3-4-联合" class="headerlink" title="==3.4 联合=="></a>==3.4 联合==</h2><h3 id="3-4-1-多个随机变量的联合概率密度"><a href="#3-4-1-多个随机变量的联合概率密度" class="headerlink" title="3.4.1 多个随机变量的联合概率密度"></a>3.4.1 多个随机变量的联合概率密度</h3><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1geeakchls0j30ir0m042z.jpg" alt></p>
 <h2 id="3-5-条件概率密度"><a href="#3-5-条件概率密度" class="headerlink" title="3.5 条件概率密度"></a>3.5 条件概率密度</h2><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxw6lzb8bj310r0hq7ah.jpg" alt="Screen Shot 2020-03-05 at 8.12.57 PM"></p>
 <h3 id="3-5-1-以事件为条件"><a href="#3-5-1-以事件为条件" class="headerlink" title="3.5.1 以事件为条件"></a>3.5.1 以事件为条件</h3><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxwdvmsl7j30w50u0qs6.jpg" alt="截屏2020-04-18 15.20.45"></p>
 <p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1gdxw8tvwg9j318m0u0qkm.jpg" alt="截屏2020-04-18 15.16.06"></p>
@@ -234,7 +234,7 @@ E(Y)=\sum_x g(x) p_X(x)=\sum_y y p_Y(x) \quad (Y=g(X))</script><p><img src="http
 <p><img src="/notebook.github.io/notebook.github.io/2020/05/01/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/Screen Shot 2020-03-12 at 8.06.51 PM.png" alt></p>
 <p><img src="/notebook.github.io/notebook.github.io/2020/05/01/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/Screen Shot 2020-03-12 at 8.16.19 PM.png" alt></p>
 <p><img src="/notebook.github.io/notebook.github.io/2020/05/01/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/Screen Shot 2020-03-12 at 8.16.57 PM.png" alt></p>
-<h1 id="3-随机过程"><a href="#3-随机过程" class="headerlink" title="3 随机过程"></a>3 随机过程</h1><blockquote>
+<h2 id="3-随机过程"><a href="#3-随机过程" class="headerlink" title="3 随机过程"></a>3 随机过程</h2><blockquote>
 <p>包含时间以及数据序列的概率模型</p>
 </blockquote>
 <p><img src="/notebook.github.io/notebook.github.io/2020/05/01/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/Screen Shot 2020-03-12 at 12.15.13 AM.png" alt></p>
@@ -287,7 +287,7 @@ E(Y)=\sum_x g(x) p_X(x)=\sum_y y p_Y(x) \quad (Y=g(X))</script><p><img src="http
 <p><img src="/notebook.github.io/notebook.github.io/2020/05/01/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/Screen Shot 2020-03-12 at 9.17.48 PM.png" alt></p>
 <p><img src="/notebook.github.io/notebook.github.io/2020/05/01/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/Screen Shot 2020-03-12 at 9.18.20 PM.png" alt></p>
 <p><img src="/notebook.github.io/notebook.github.io/2020/05/01/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/Screen Shot 2020-03-12 at 9.18.47 PM.png" alt></p>
-<h1 id="4-极限理论"><a href="#4-极限理论" class="headerlink" title="4 极限理论"></a>4 极限理论</h1><p><img src="/notebook.github.io/notebook.github.io/2020/05/01/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/Screen Shot 2020-03-13 at 9.58.26 PM.png" alt></p>
+<h2 id="4-极限理论"><a href="#4-极限理论" class="headerlink" title="4 极限理论"></a>4 极限理论</h2><p><img src="/notebook.github.io/notebook.github.io/2020/05/01/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/Screen Shot 2020-03-13 at 9.58.26 PM.png" alt></p>
 <h2 id="4-1-弱大数定理"><a href="#4-1-弱大数定理" class="headerlink" title="4.1 弱大数定理"></a>4.1 弱大数定理</h2><h3 id="4-1-1-马尔科夫与切比雪夫不等式"><a href="#4-1-1-马尔科夫与切比雪夫不等式" class="headerlink" title="4.1.1 马尔科夫与切比雪夫不等式"></a>4.1.1 马尔科夫与切比雪夫不等式</h3><p><img src="/notebook.github.io/notebook.github.io/2020/05/01/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/Screen Shot 2020-03-13 at 7.57.19 PM.png" alt></p>
 <blockquote>
 <p>从均值考虑，如果均值小，随机变量取大值的概率也小。</p>
@@ -306,7 +306,7 @@ E(Y)=\sum_x g(x) p_X(x)=\sum_y y p_Y(x) \quad (Y=g(X))</script><p><img src="http
 <p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge40pjlc2jj31kq0m2ahn.jpg" alt="截屏2020-04-23 22.23.44"></p>
 <h3 id="4-3-2-强大数定理"><a href="#4-3-2-强大数定理" class="headerlink" title="4.3.2 强大数定理"></a>4.3.2 强大数定理</h3><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge40x1qx5qj31ly0p8wr5.jpg" alt="截屏2020-04-23 22.31.11"></p>
 <p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge40hwv45yj313x0u0kev.jpg" alt="截屏2020-04-23 22.16.35"></p>
-<h1 id="5-统计推断"><a href="#5-统计推断" class="headerlink" title="5 统计推断"></a>5 统计推断</h1><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1geaqwesxfvj31h40j0dpq.jpg" alt="截屏2020-04-29 18.03.31"></p>
+<h2 id="5-统计推断"><a href="#5-统计推断" class="headerlink" title="5 统计推断"></a>5 统计推断</h2><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1geaqwesxfvj31h40j0dpq.jpg" alt="截屏2020-04-29 18.03.31"></p>
 <h2 id="5-1-贝叶斯"><a href="#5-1-贝叶斯" class="headerlink" title="5.1 贝叶斯"></a>5.1 贝叶斯</h2><h3 id="5-1-1-后验分布"><a href="#5-1-1-后验分布" class="headerlink" title="5.1.1 后验分布"></a>5.1.1 后验分布</h3><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge74e3bhpmj30z00u01kx.jpg" alt="截屏2020-04-26 14.48.05"></p>
 <p><img src="/notebook.github.io/notebook.github.io/2020/05/01/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/Screen Shot 2020-03-13 at 7.39.32 PM.png" alt></p>
 <p><img src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge74jky64dj30o20w2n31.jpg" alt="截屏2020-04-26 14.53.18" style="zoom:50%;"></p>
